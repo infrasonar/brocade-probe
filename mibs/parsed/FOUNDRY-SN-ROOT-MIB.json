@@ -1,0 +1,7466 @@
+{
+  "IMPORTS": [
+    [
+      "SNMPv2-SMI",
+      [
+        "MODULE-IDENTITY",
+        "enterprises"
+      ]
+    ]
+  ],
+  "foundry": {
+    "tp": "MODULE-IDENTITY",
+    "value": [
+      "enterprises",
+      1991
+    ]
+  },
+  "snTraps": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "foundry",
+      0
+    ]
+  },
+  "products": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "foundry",
+      1
+    ]
+  },
+  "vendors": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "foundry",
+      2
+    ]
+  },
+  "switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "products",
+      1
+    ]
+  },
+  "snChassis": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "switch",
+      1
+    ]
+  },
+  "snAgentSys": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "switch",
+      2
+    ]
+  },
+  "snSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "switch",
+      3
+    ]
+  },
+  "snL4": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "switch",
+      4
+    ]
+  },
+  "snStack": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "switch",
+      5
+    ]
+  },
+  "snSci": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "switch",
+      6
+    ]
+  },
+  "fdrySntp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "switch",
+      7
+    ]
+  },
+  "fdryRadius": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "switch",
+      8
+    ]
+  },
+  "fdryTacacs": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "switch",
+      9
+    ]
+  },
+  "fdryTrap": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "switch",
+      10
+    ]
+  },
+  "brcdSysLog": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "switch",
+      11
+    ]
+  },
+  "brcdMct": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "switch",
+      12
+    ]
+  },
+  "brcdFabric": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "switch",
+      13
+    ]
+  },
+  "router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "products",
+      2
+    ]
+  },
+  "snIpx": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "router",
+      1
+    ]
+  },
+  "snIp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "router",
+      2
+    ]
+  },
+  "snRip": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "router",
+      3
+    ]
+  },
+  "snOspf": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "router",
+      4
+    ]
+  },
+  "snDvmrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "router",
+      5
+    ]
+  },
+  "snIgmp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "router",
+      6
+    ]
+  },
+  "snFsrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "router",
+      7
+    ]
+  },
+  "snGblRt": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "router",
+      8
+    ]
+  },
+  "snPim": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "router",
+      9
+    ]
+  },
+  "snAppleTalk": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "router",
+      10
+    ]
+  },
+  "snBgp4": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "router",
+      11
+    ]
+  },
+  "snVrrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "router",
+      12
+    ]
+  },
+  "snLoopbackIf": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "router",
+      13
+    ]
+  },
+  "snPOS": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "router",
+      14
+    ]
+  },
+  "snMpls": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "router",
+      15
+    ]
+  },
+  "fdryAcl": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "router",
+      16
+    ]
+  },
+  "fdryIpv6": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "router",
+      17
+    ]
+  },
+  "registration": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "products",
+      3
+    ]
+  },
+  "snFastIron": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      1
+    ]
+  },
+  "snFIWGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIron",
+      1
+    ]
+  },
+  "snFIBBSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIron",
+      2
+    ]
+  },
+  "snNetIron": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      2
+    ]
+  },
+  "snNIRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIron",
+      1
+    ]
+  },
+  "snServerIron": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      3
+    ]
+  },
+  "snSI": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snServerIron",
+      1
+    ]
+  },
+  "snSIXL": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snServerIron",
+      2
+    ]
+  },
+  "snSIXLTCS": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snServerIron",
+      3
+    ]
+  },
+  "snTurboIron": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      4
+    ]
+  },
+  "snTISwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snTurboIron",
+      1
+    ]
+  },
+  "snTIRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snTurboIron",
+      2
+    ]
+  },
+  "snTurboIron8": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      5
+    ]
+  },
+  "snT8Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snTurboIron8",
+      1
+    ]
+  },
+  "snT8Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snTurboIron8",
+      2
+    ]
+  },
+  "snT8SI": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snTurboIron8",
+      3
+    ]
+  },
+  "snT8SIXLG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snTurboIron8",
+      4
+    ]
+  },
+  "snBigIron4000": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      6
+    ]
+  },
+  "snBI4000Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIron4000",
+      1
+    ]
+  },
+  "snBI4000Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIron4000",
+      2
+    ]
+  },
+  "snBI4000SI": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIron4000",
+      3
+    ]
+  },
+  "snBigIron8000": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      7
+    ]
+  },
+  "snBI8000Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIron8000",
+      1
+    ]
+  },
+  "snBI8000Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIron8000",
+      2
+    ]
+  },
+  "snBI8000SI": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIron8000",
+      3
+    ]
+  },
+  "snFastIron2": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      8
+    ]
+  },
+  "snFI2Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIron2",
+      1
+    ]
+  },
+  "snFI2Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIron2",
+      2
+    ]
+  },
+  "snFastIron2Plus": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      9
+    ]
+  },
+  "snFI2PlusSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIron2Plus",
+      1
+    ]
+  },
+  "snFI2PlusRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIron2Plus",
+      2
+    ]
+  },
+  "snNetIron400": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      10
+    ]
+  },
+  "snNI400Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIron400",
+      1
+    ]
+  },
+  "snNetIron800": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      11
+    ]
+  },
+  "snNI800Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIron800",
+      1
+    ]
+  },
+  "snFastIron2GC": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      12
+    ]
+  },
+  "snFI2GCSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIron2GC",
+      1
+    ]
+  },
+  "snFI2GCRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIron2GC",
+      2
+    ]
+  },
+  "snFastIron2PlusGC": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      13
+    ]
+  },
+  "snFI2PlusGCSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIron2PlusGC",
+      1
+    ]
+  },
+  "snFI2PlusGCRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIron2PlusGC",
+      2
+    ]
+  },
+  "snBigIron15000": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      14
+    ]
+  },
+  "snBI15000Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIron15000",
+      1
+    ]
+  },
+  "snBI15000Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIron15000",
+      2
+    ]
+  },
+  "snBI15000SI": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIron15000",
+      3
+    ]
+  },
+  "snNetIron1500": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      15
+    ]
+  },
+  "snNI1500Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIron1500",
+      1
+    ]
+  },
+  "snFastIron3": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      16
+    ]
+  },
+  "snFI3Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIron3",
+      1
+    ]
+  },
+  "snFI3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIron3",
+      2
+    ]
+  },
+  "snFastIron3GC": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      17
+    ]
+  },
+  "snFI3GCSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIron3GC",
+      1
+    ]
+  },
+  "snFI3GCRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIron3GC",
+      2
+    ]
+  },
+  "snServerIron400": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      18
+    ]
+  },
+  "snSI400Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snServerIron400",
+      1
+    ]
+  },
+  "snSI400Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snServerIron400",
+      2
+    ]
+  },
+  "snServerIron800": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      19
+    ]
+  },
+  "snSI800Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snServerIron800",
+      1
+    ]
+  },
+  "snSI800Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snServerIron800",
+      2
+    ]
+  },
+  "snServerIron1500": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      20
+    ]
+  },
+  "snSI1500Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snServerIron1500",
+      1
+    ]
+  },
+  "snSI1500Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snServerIron1500",
+      2
+    ]
+  },
+  "sn4802": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      21
+    ]
+  },
+  "sn4802Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "sn4802",
+      1
+    ]
+  },
+  "sn4802Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "sn4802",
+      2
+    ]
+  },
+  "sn4802SI": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "sn4802",
+      3
+    ]
+  },
+  "snFastIron400": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      22
+    ]
+  },
+  "snFI400Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIron400",
+      1
+    ]
+  },
+  "snFI400Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIron400",
+      2
+    ]
+  },
+  "snFastIron800": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      23
+    ]
+  },
+  "snFI800Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIron800",
+      1
+    ]
+  },
+  "snFI800Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIron800",
+      2
+    ]
+  },
+  "snFastIron1500": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      24
+    ]
+  },
+  "snFI1500Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIron1500",
+      1
+    ]
+  },
+  "snFI1500Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIron1500",
+      2
+    ]
+  },
+  "snFES2402": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      25
+    ]
+  },
+  "snFES2402Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFES2402",
+      1
+    ]
+  },
+  "snFES2402Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFES2402",
+      2
+    ]
+  },
+  "snFES4802": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      26
+    ]
+  },
+  "snFES4802Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFES4802",
+      1
+    ]
+  },
+  "snFES4802Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFES4802",
+      2
+    ]
+  },
+  "snFES9604": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      27
+    ]
+  },
+  "snFES9604Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFES9604",
+      1
+    ]
+  },
+  "snFES9604Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFES9604",
+      2
+    ]
+  },
+  "snFES12GCF": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      28
+    ]
+  },
+  "snFES12GCFSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFES12GCF",
+      1
+    ]
+  },
+  "snFES12GCFRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFES12GCF",
+      2
+    ]
+  },
+  "snFES2402POE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      29
+    ]
+  },
+  "snFES2402POESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFES2402POE",
+      1
+    ]
+  },
+  "snFES2402POERouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFES2402POE",
+      2
+    ]
+  },
+  "snFES4802POE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      30
+    ]
+  },
+  "snFES4802POESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFES4802POE",
+      1
+    ]
+  },
+  "snFES4802POERouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFES4802POE",
+      2
+    ]
+  },
+  "snNetIron4802": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      31
+    ]
+  },
+  "snNI4802Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIron4802",
+      1
+    ]
+  },
+  "snNI4802Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIron4802",
+      2
+    ]
+  },
+  "snBigIronMG8": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      32
+    ]
+  },
+  "snBIMG8Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIronMG8",
+      1
+    ]
+  },
+  "snBIMG8Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIronMG8",
+      2
+    ]
+  },
+  "snNetIron40G": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      33
+    ]
+  },
+  "snNI40GRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIron40G",
+      2
+    ]
+  },
+  "snFESXFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      34
+    ]
+  },
+  "snFESX424Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESXFamily",
+      1
+    ]
+  },
+  "snFESX424BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424Family",
+      1
+    ]
+  },
+  "snFESX424": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424BaseFamily",
+      1
+    ]
+  },
+  "snFESX424Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424",
+      1
+    ]
+  },
+  "snFESX424Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424",
+      2
+    ]
+  },
+  "snFESX424Prem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424BaseFamily",
+      2
+    ]
+  },
+  "snFESX424PremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424Prem",
+      1
+    ]
+  },
+  "snFESX424PremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424Prem",
+      2
+    ]
+  },
+  "snFESX424Plus1XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424Family",
+      2
+    ]
+  },
+  "snFESX424Plus1XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424Plus1XGFamily",
+      1
+    ]
+  },
+  "snFESX424Plus1XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424Plus1XG",
+      1
+    ]
+  },
+  "snFESX424Plus1XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424Plus1XG",
+      2
+    ]
+  },
+  "snFESX424Plus1XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424Plus1XGFamily",
+      2
+    ]
+  },
+  "snFESX424Plus1XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424Plus1XGPrem",
+      1
+    ]
+  },
+  "snFESX424Plus1XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424Plus1XGPrem",
+      2
+    ]
+  },
+  "snFESX424Plus2XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424Family",
+      3
+    ]
+  },
+  "snFESX424Plus2XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424Plus2XGFamily",
+      1
+    ]
+  },
+  "snFESX424Plus2XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424Plus2XG",
+      1
+    ]
+  },
+  "snFESX424Plus2XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424Plus2XG",
+      2
+    ]
+  },
+  "snFESX424Plus2XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424Plus2XGFamily",
+      2
+    ]
+  },
+  "snFESX424Plus2XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424Plus2XGPrem",
+      1
+    ]
+  },
+  "snFESX424Plus2XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424Plus2XGPrem",
+      2
+    ]
+  },
+  "snFESX448Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESXFamily",
+      2
+    ]
+  },
+  "snFESX448BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448Family",
+      1
+    ]
+  },
+  "snFESX448": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448BaseFamily",
+      1
+    ]
+  },
+  "snFESX448Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448",
+      1
+    ]
+  },
+  "snFESX448Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448",
+      2
+    ]
+  },
+  "snFESX448Prem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448BaseFamily",
+      2
+    ]
+  },
+  "snFESX448PremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448Prem",
+      1
+    ]
+  },
+  "snFESX448PremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448Prem",
+      2
+    ]
+  },
+  "snFESX448Plus1XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448Family",
+      2
+    ]
+  },
+  "snFESX448Plus1XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448Plus1XGFamily",
+      1
+    ]
+  },
+  "snFESX448Plus1XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448Plus1XG",
+      1
+    ]
+  },
+  "snFESX448Plus1XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448Plus1XG",
+      2
+    ]
+  },
+  "snFESX448Plus1XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448Plus1XGFamily",
+      2
+    ]
+  },
+  "snFESX448Plus1XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448Plus1XGPrem",
+      1
+    ]
+  },
+  "snFESX448Plus1XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448Plus1XGPrem",
+      2
+    ]
+  },
+  "snFESX448Plus2XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448Family",
+      3
+    ]
+  },
+  "snFESX448Plus2XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448Plus2XGFamily",
+      1
+    ]
+  },
+  "snFESX448Plus2XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448Plus2XG",
+      1
+    ]
+  },
+  "snFESX448Plus2XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448Plus2XG",
+      2
+    ]
+  },
+  "snFESX448Plus2XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448Plus2XGFamily",
+      2
+    ]
+  },
+  "snFESX448Plus2XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448Plus2XGPrem",
+      1
+    ]
+  },
+  "snFESX448Plus2XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448Plus2XGPrem",
+      2
+    ]
+  },
+  "snFESX424FiberFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESXFamily",
+      3
+    ]
+  },
+  "snFESX424FiberBaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424FiberFamily",
+      1
+    ]
+  },
+  "snFESX424Fiber": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424FiberBaseFamily",
+      1
+    ]
+  },
+  "snFESX424FiberSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424Fiber",
+      1
+    ]
+  },
+  "snFESX424FiberRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424Fiber",
+      2
+    ]
+  },
+  "snFESX424FiberPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424FiberBaseFamily",
+      2
+    ]
+  },
+  "snFESX424FiberPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424FiberPrem",
+      1
+    ]
+  },
+  "snFESX424FiberPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424FiberPrem",
+      2
+    ]
+  },
+  "snFESX424FiberPlus1XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424FiberFamily",
+      2
+    ]
+  },
+  "snFESX424FiberPlus1XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424FiberPlus1XGFamily",
+      1
+    ]
+  },
+  "snFESX424FiberPlus1XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424FiberPlus1XG",
+      1
+    ]
+  },
+  "snFESX424FiberPlus1XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424FiberPlus1XG",
+      2
+    ]
+  },
+  "snFESX424FiberPlus1XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424FiberPlus1XGFamily",
+      2
+    ]
+  },
+  "snFESX424FiberPlus1XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424FiberPlus1XGPrem",
+      1
+    ]
+  },
+  "snFESX424FiberPlus1XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424FiberPlus1XGPrem",
+      2
+    ]
+  },
+  "snFESX424FiberPlus2XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424FiberFamily",
+      3
+    ]
+  },
+  "snFESX424FiberPlus2XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424FiberPlus2XGFamily",
+      1
+    ]
+  },
+  "snFESX424FiberPlus2XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424FiberPlus2XG",
+      1
+    ]
+  },
+  "snFESX424FiberPlus2XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424FiberPlus2XG",
+      2
+    ]
+  },
+  "snFESX424FiberPlus2XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424FiberPlus2XGFamily",
+      2
+    ]
+  },
+  "snFESX424FiberPlus2XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424FiberPlus2XGPrem",
+      1
+    ]
+  },
+  "snFESX424FiberPlus2XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424FiberPlus2XGPrem",
+      2
+    ]
+  },
+  "snFESX448FiberFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESXFamily",
+      4
+    ]
+  },
+  "snFESX448FiberBaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448FiberFamily",
+      1
+    ]
+  },
+  "snFESX448Fiber": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448FiberBaseFamily",
+      1
+    ]
+  },
+  "snFESX448FiberSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448Fiber",
+      1
+    ]
+  },
+  "snFESX448FiberRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448Fiber",
+      2
+    ]
+  },
+  "snFESX448FiberPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448FiberBaseFamily",
+      2
+    ]
+  },
+  "snFESX448FiberPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448FiberPrem",
+      1
+    ]
+  },
+  "snFESX448FiberPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448FiberPrem",
+      2
+    ]
+  },
+  "snFESX448FiberPlus1XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448FiberFamily",
+      2
+    ]
+  },
+  "snFESX448FiberPlus1XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448FiberPlus1XGFamily",
+      1
+    ]
+  },
+  "snFESX448FiberPlus1XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448FiberPlus1XG",
+      1
+    ]
+  },
+  "snFESX448FiberPlus1XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448FiberPlus1XG",
+      2
+    ]
+  },
+  "snFESX448FiberPlus1XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448FiberPlus1XGFamily",
+      2
+    ]
+  },
+  "snFESX448FiberPlus1XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448FiberPlus1XGPrem",
+      1
+    ]
+  },
+  "snFESX448FiberPlus1XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448FiberPlus1XGPrem",
+      2
+    ]
+  },
+  "snFESX448FiberPlus2XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448FiberFamily",
+      3
+    ]
+  },
+  "snFESX448FiberPlus2XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448FiberPlus2XGFamily",
+      1
+    ]
+  },
+  "snFESX448FiberPlus2XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448FiberPlus2XG",
+      1
+    ]
+  },
+  "snFESX448FiberPlus2XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448FiberPlus2XG",
+      2
+    ]
+  },
+  "snFESX448FiberPlus2XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448FiberPlus2XGFamily",
+      2
+    ]
+  },
+  "snFESX448FiberPlus2XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448FiberPlus2XGPrem",
+      1
+    ]
+  },
+  "snFESX448FiberPlus2XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX448FiberPlus2XGPrem",
+      2
+    ]
+  },
+  "snFESX424POEFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESXFamily",
+      5
+    ]
+  },
+  "snFESX424POEBaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424POEFamily",
+      1
+    ]
+  },
+  "snFESX424POE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424POEBaseFamily",
+      1
+    ]
+  },
+  "snFESX424POESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424POE",
+      1
+    ]
+  },
+  "snFESX424POERouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424POE",
+      2
+    ]
+  },
+  "snFESX424POEPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424POEBaseFamily",
+      2
+    ]
+  },
+  "snFESX424POEPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424POEPrem",
+      1
+    ]
+  },
+  "snFESX424POEPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424POEPrem",
+      2
+    ]
+  },
+  "snFESX424POEPlus1XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424POEFamily",
+      2
+    ]
+  },
+  "snFESX424POEPlus1XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424POEPlus1XGFamily",
+      1
+    ]
+  },
+  "snFESX424POEPlus1XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424POEPlus1XG",
+      1
+    ]
+  },
+  "snFESX424POEPlus1XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424POEPlus1XG",
+      2
+    ]
+  },
+  "snFESX424POEPlus1XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424POEPlus1XGFamily",
+      2
+    ]
+  },
+  "snFESX424POEPlus1XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424POEPlus1XGPrem",
+      1
+    ]
+  },
+  "snFESX424POEPlus1XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424POEPlus1XGPrem",
+      2
+    ]
+  },
+  "snFESX424POEPlus2XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424POEFamily",
+      3
+    ]
+  },
+  "snFESX424POEPlus2XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424POEPlus2XGFamily",
+      1
+    ]
+  },
+  "snFESX424POEPlus2XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424POEPlus2XG",
+      1
+    ]
+  },
+  "snFESX424POEPlus2XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424POEPlus2XG",
+      2
+    ]
+  },
+  "snFESX424POEPlus2XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424POEPlus2XGFamily",
+      2
+    ]
+  },
+  "snFESX424POEPlus2XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424POEPlus2XGPrem",
+      1
+    ]
+  },
+  "snFESX424POEPlus2XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX424POEPlus2XGPrem",
+      2
+    ]
+  },
+  "snFESX624Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESXFamily",
+      6
+    ]
+  },
+  "snFESX624BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624Family",
+      1
+    ]
+  },
+  "snFESX624": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624BaseFamily",
+      1
+    ]
+  },
+  "snFESX624Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624",
+      1
+    ]
+  },
+  "snFESX624Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624",
+      2
+    ]
+  },
+  "snFESX624Prem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624BaseFamily",
+      2
+    ]
+  },
+  "snFESX624PremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624Prem",
+      1
+    ]
+  },
+  "snFESX624PremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624Prem",
+      2
+    ]
+  },
+  "snFESX624Prem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624Prem",
+      3
+    ]
+  },
+  "snFESX624Plus1XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624Family",
+      2
+    ]
+  },
+  "snFESX624Plus1XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624Plus1XGFamily",
+      1
+    ]
+  },
+  "snFESX624Plus1XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624Plus1XG",
+      1
+    ]
+  },
+  "snFESX624Plus1XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624Plus1XG",
+      2
+    ]
+  },
+  "snFESX624Plus1XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624Plus1XGFamily",
+      2
+    ]
+  },
+  "snFESX624Plus1XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624Plus1XGPrem",
+      1
+    ]
+  },
+  "snFESX624Plus1XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624Plus1XGPrem",
+      2
+    ]
+  },
+  "snFESX624Plus1XGPrem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624Plus1XGPrem",
+      3
+    ]
+  },
+  "snFESX624Plus2XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624Family",
+      3
+    ]
+  },
+  "snFESX624Plus2XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624Plus2XGFamily",
+      1
+    ]
+  },
+  "snFESX624Plus2XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624Plus2XG",
+      1
+    ]
+  },
+  "snFESX624Plus2XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624Plus2XG",
+      2
+    ]
+  },
+  "snFESX624Plus2XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624Plus2XGFamily",
+      2
+    ]
+  },
+  "snFESX624Plus2XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624Plus2XGPrem",
+      1
+    ]
+  },
+  "snFESX624Plus2XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624Plus2XGPrem",
+      2
+    ]
+  },
+  "snFESX624Plus2XGPrem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624Plus2XGPrem",
+      3
+    ]
+  },
+  "snFESX648Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESXFamily",
+      7
+    ]
+  },
+  "snFESX648BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648Family",
+      1
+    ]
+  },
+  "snFESX648": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648BaseFamily",
+      1
+    ]
+  },
+  "snFESX648Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648",
+      1
+    ]
+  },
+  "snFESX648Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648",
+      2
+    ]
+  },
+  "snFESX648Prem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648BaseFamily",
+      2
+    ]
+  },
+  "snFESX648PremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648Prem",
+      1
+    ]
+  },
+  "snFESX648PremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648Prem",
+      2
+    ]
+  },
+  "snFESX648Prem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648Prem",
+      3
+    ]
+  },
+  "snFESX648Plus1XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648Family",
+      2
+    ]
+  },
+  "snFESX648Plus1XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648Plus1XGFamily",
+      1
+    ]
+  },
+  "snFESX648Plus1XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648Plus1XG",
+      1
+    ]
+  },
+  "snFESX648Plus1XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648Plus1XG",
+      2
+    ]
+  },
+  "snFESX648Plus1XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648Plus1XGFamily",
+      2
+    ]
+  },
+  "snFESX648Plus1XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648Plus1XGPrem",
+      1
+    ]
+  },
+  "snFESX648Plus1XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648Plus1XGPrem",
+      2
+    ]
+  },
+  "snFESX648Plus1XGPrem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648Plus1XGPrem",
+      3
+    ]
+  },
+  "snFESX648Plus2XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648Family",
+      3
+    ]
+  },
+  "snFESX648Plus2XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648Plus2XGFamily",
+      1
+    ]
+  },
+  "snFESX648Plus2XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648Plus2XG",
+      1
+    ]
+  },
+  "snFESX648Plus2XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648Plus2XG",
+      2
+    ]
+  },
+  "snFESX648Plus2XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648Plus2XGFamily",
+      2
+    ]
+  },
+  "snFESX648Plus2XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648Plus2XGPrem",
+      1
+    ]
+  },
+  "snFESX648Plus2XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648Plus2XGPrem",
+      2
+    ]
+  },
+  "snFESX648Plus2XGPrem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648Plus2XGPrem",
+      3
+    ]
+  },
+  "snFESX624FiberFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESXFamily",
+      8
+    ]
+  },
+  "snFESX624FiberBaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624FiberFamily",
+      1
+    ]
+  },
+  "snFESX624Fiber": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624FiberBaseFamily",
+      1
+    ]
+  },
+  "snFESX624FiberSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624Fiber",
+      1
+    ]
+  },
+  "snFESX624FiberRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624Fiber",
+      2
+    ]
+  },
+  "snFESX624FiberPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624FiberBaseFamily",
+      2
+    ]
+  },
+  "snFESX624FiberPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624FiberPrem",
+      1
+    ]
+  },
+  "snFESX624FiberPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624FiberPrem",
+      2
+    ]
+  },
+  "snFESX624FiberPrem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624FiberPrem",
+      3
+    ]
+  },
+  "snFESX624FiberPlus1XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624FiberFamily",
+      2
+    ]
+  },
+  "snFESX624FiberPlus1XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624FiberPlus1XGFamily",
+      1
+    ]
+  },
+  "snFESX624FiberPlus1XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624FiberPlus1XG",
+      1
+    ]
+  },
+  "snFESX624FiberPlus1XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624FiberPlus1XG",
+      2
+    ]
+  },
+  "snFESX624FiberPlus1XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624FiberPlus1XGFamily",
+      2
+    ]
+  },
+  "snFESX624FiberPlus1XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624FiberPlus1XGPrem",
+      1
+    ]
+  },
+  "snFESX624FiberPlus1XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624FiberPlus1XGPrem",
+      2
+    ]
+  },
+  "snFESX624FiberPlus1XGPrem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624FiberPlus1XGPrem",
+      3
+    ]
+  },
+  "snFESX624FiberPlus2XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624FiberFamily",
+      3
+    ]
+  },
+  "snFESX624FiberPlus2XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624FiberPlus2XGFamily",
+      1
+    ]
+  },
+  "snFESX624FiberPlus2XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624FiberPlus2XG",
+      1
+    ]
+  },
+  "snFESX624FiberPlus2XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624FiberPlus2XG",
+      2
+    ]
+  },
+  "snFESX624FiberPlus2XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624FiberPlus2XGFamily",
+      2
+    ]
+  },
+  "snFESX624FiberPlus2XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624FiberPlus2XGPrem",
+      1
+    ]
+  },
+  "snFESX624FiberPlus2XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624FiberPlus2XGPrem",
+      2
+    ]
+  },
+  "snFESX624FiberPlus2XGPrem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624FiberPlus2XGPrem",
+      3
+    ]
+  },
+  "snFESX648FiberFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESXFamily",
+      9
+    ]
+  },
+  "snFESX648FiberBaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648FiberFamily",
+      1
+    ]
+  },
+  "snFESX648Fiber": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648FiberBaseFamily",
+      1
+    ]
+  },
+  "snFESX648FiberSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648Fiber",
+      1
+    ]
+  },
+  "snFESX648FiberRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648Fiber",
+      2
+    ]
+  },
+  "snFESX648FiberPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648FiberBaseFamily",
+      2
+    ]
+  },
+  "snFESX648FiberPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648FiberPrem",
+      1
+    ]
+  },
+  "snFESX648FiberPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648FiberPrem",
+      2
+    ]
+  },
+  "snFESX648FiberPrem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648FiberPrem",
+      3
+    ]
+  },
+  "snFESX648FiberPlus1XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648FiberFamily",
+      2
+    ]
+  },
+  "snFESX648FiberPlus1XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648FiberPlus1XGFamily",
+      1
+    ]
+  },
+  "snFESX648FiberPlus1XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648FiberPlus1XG",
+      1
+    ]
+  },
+  "snFESX648FiberPlus1XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648FiberPlus1XG",
+      2
+    ]
+  },
+  "snFESX648FiberPlus1XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648FiberPlus1XGFamily",
+      2
+    ]
+  },
+  "snFESX648FiberPlus1XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648FiberPlus1XGPrem",
+      1
+    ]
+  },
+  "snFESX648FiberPlus1XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648FiberPlus1XGPrem",
+      2
+    ]
+  },
+  "snFESX648FiberPlus1XGPrem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648FiberPlus1XGPrem",
+      3
+    ]
+  },
+  "snFESX648FiberPlus2XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648FiberFamily",
+      3
+    ]
+  },
+  "snFESX648FiberPlus2XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648FiberPlus2XGFamily",
+      1
+    ]
+  },
+  "snFESX648FiberPlus2XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648FiberPlus2XG",
+      1
+    ]
+  },
+  "snFESX648FiberPlus2XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648FiberPlus2XG",
+      2
+    ]
+  },
+  "snFESX648FiberPlus2XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648FiberPlus2XGFamily",
+      2
+    ]
+  },
+  "snFESX648FiberPlus2XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648FiberPlus2XGPrem",
+      1
+    ]
+  },
+  "snFESX648FiberPlus2XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648FiberPlus2XGPrem",
+      2
+    ]
+  },
+  "snFESX648FiberPlus2XGPrem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648FiberPlus2XGPrem",
+      3
+    ]
+  },
+  "snFESX624POEFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESXFamily",
+      10
+    ]
+  },
+  "snFESX624POEBaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POEFamily",
+      1
+    ]
+  },
+  "snFESX624POE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POEBaseFamily",
+      1
+    ]
+  },
+  "snFESX624POESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POE",
+      1
+    ]
+  },
+  "snFESX624POERouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POE",
+      2
+    ]
+  },
+  "snFESX624POEPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POEBaseFamily",
+      2
+    ]
+  },
+  "snFESX624POEPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POEPrem",
+      1
+    ]
+  },
+  "snFESX624POEPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POEPrem",
+      2
+    ]
+  },
+  "snFESX624POEPrem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POEPrem",
+      3
+    ]
+  },
+  "snFESX624POEPlus1XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POEFamily",
+      2
+    ]
+  },
+  "snFESX624POEPlus1XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POEPlus1XGFamily",
+      1
+    ]
+  },
+  "snFESX624POEPlus1XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POEPlus1XG",
+      1
+    ]
+  },
+  "snFESX624POEPlus1XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POEPlus1XG",
+      2
+    ]
+  },
+  "snFESX624POEPlus1XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POEPlus1XGFamily",
+      2
+    ]
+  },
+  "snFESX624POEPlus1XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POEPlus1XGPrem",
+      1
+    ]
+  },
+  "snFESX624POEPlus1XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POEPlus1XGPrem",
+      2
+    ]
+  },
+  "snFESX624POEPlus1XGPrem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POEPlus1XGPrem",
+      3
+    ]
+  },
+  "snFESX624POEPlus2XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POEFamily",
+      3
+    ]
+  },
+  "snFESX624POEPlus2XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POEPlus2XGFamily",
+      1
+    ]
+  },
+  "snFESX624POEPlus2XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POEPlus2XG",
+      1
+    ]
+  },
+  "snFESX624POEPlus2XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POEPlus2XG",
+      2
+    ]
+  },
+  "snFESX624POEPlus2XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POEPlus2XGFamily",
+      2
+    ]
+  },
+  "snFESX624POEPlus2XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POEPlus2XGPrem",
+      1
+    ]
+  },
+  "snFESX624POEPlus2XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POEPlus2XGPrem",
+      2
+    ]
+  },
+  "snFESX624POEPlus2XGPrem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624POEPlus2XGPrem",
+      3
+    ]
+  },
+  "snFESX624EFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESXFamily",
+      11
+    ]
+  },
+  "snFESX624EBaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFamily",
+      1
+    ]
+  },
+  "snFESX624E": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EBaseFamily",
+      1
+    ]
+  },
+  "snFESX624ESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624E",
+      1
+    ]
+  },
+  "snFESX624ERouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624E",
+      2
+    ]
+  },
+  "snFESX624EPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EBaseFamily",
+      2
+    ]
+  },
+  "snFESX624EPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EPrem",
+      1
+    ]
+  },
+  "snFESX624EPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EPrem",
+      2
+    ]
+  },
+  "snFESX624EPrem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EPrem",
+      3
+    ]
+  },
+  "snFESX624EPlus1XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFamily",
+      2
+    ]
+  },
+  "snFESX624EPlus1XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EPlus1XGFamily",
+      1
+    ]
+  },
+  "snFESX624EPlus1XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EPlus1XG",
+      1
+    ]
+  },
+  "snFESX624EPlus1XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EPlus1XG",
+      2
+    ]
+  },
+  "snFESX624EPlus1XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EPlus1XGFamily",
+      2
+    ]
+  },
+  "snFESX624EPlus1XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EPlus1XGPrem",
+      1
+    ]
+  },
+  "snFESX624EPlus1XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EPlus1XGPrem",
+      2
+    ]
+  },
+  "snFESX624EPlus1XGPrem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EPlus1XGPrem",
+      3
+    ]
+  },
+  "snFESX624EPlus2XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFamily",
+      3
+    ]
+  },
+  "snFESX624EPlus2XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EPlus2XGFamily",
+      1
+    ]
+  },
+  "snFESX624EPlus2XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EPlus2XG",
+      1
+    ]
+  },
+  "snFESX624EPlus2XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EPlus2XG",
+      2
+    ]
+  },
+  "snFESX624EPlus2XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EPlus2XGFamily",
+      2
+    ]
+  },
+  "snFESX624EPlus2XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EPlus2XGPrem",
+      1
+    ]
+  },
+  "snFESX624EPlus2XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EPlus2XGPrem",
+      2
+    ]
+  },
+  "snFESX624EPlus2XGPrem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EPlus2XGPrem",
+      3
+    ]
+  },
+  "snFESX624EFiberFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESXFamily",
+      12
+    ]
+  },
+  "snFESX624EFiberBaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiberFamily",
+      1
+    ]
+  },
+  "snFESX624EFiber": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiberBaseFamily",
+      1
+    ]
+  },
+  "snFESX624EFiberSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiber",
+      1
+    ]
+  },
+  "snFESX624EFiberRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiber",
+      2
+    ]
+  },
+  "snFESX624EFiberPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiberBaseFamily",
+      2
+    ]
+  },
+  "snFESX624EFiberPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiberPrem",
+      1
+    ]
+  },
+  "snFESX624EFiberPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiberPrem",
+      2
+    ]
+  },
+  "snFESX624EFiberPrem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiberPrem",
+      3
+    ]
+  },
+  "snFESX624EFiberPlus1XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiberFamily",
+      2
+    ]
+  },
+  "snFESX624EFiberPlus1XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiberPlus1XGFamily",
+      1
+    ]
+  },
+  "snFESX624EFiberPlus1XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiberPlus1XG",
+      1
+    ]
+  },
+  "snFESX624EFiberPlus1XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiberPlus1XG",
+      2
+    ]
+  },
+  "snFESX624EFiberPlus1XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiberPlus1XGFamily",
+      2
+    ]
+  },
+  "snFESX624EFiberPlus1XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiberPlus1XGPrem",
+      1
+    ]
+  },
+  "snFESX624EFiberPlus1XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiberPlus1XGPrem",
+      2
+    ]
+  },
+  "snFESX624EFiberPlus1XGPrem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiberPlus1XGPrem",
+      3
+    ]
+  },
+  "snFESX624EFiberPlus2XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiberFamily",
+      3
+    ]
+  },
+  "snFESX624EFiberPlus2XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiberPlus2XGFamily",
+      1
+    ]
+  },
+  "snFESX624EFiberPlus2XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiberPlus2XG",
+      1
+    ]
+  },
+  "snFESX624EFiberPlus2XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiberPlus2XG",
+      2
+    ]
+  },
+  "snFESX624EFiberPlus2XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiberPlus2XGFamily",
+      2
+    ]
+  },
+  "snFESX624EFiberPlus2XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiberPlus2XGPrem",
+      1
+    ]
+  },
+  "snFESX624EFiberPlus2XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiberPlus2XGPrem",
+      2
+    ]
+  },
+  "snFESX624EFiberPlus2XGPrem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX624EFiberPlus2XGPrem",
+      3
+    ]
+  },
+  "snFESX648EFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESXFamily",
+      13
+    ]
+  },
+  "snFESX648EBaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648EFamily",
+      1
+    ]
+  },
+  "snFESX648E": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648EBaseFamily",
+      1
+    ]
+  },
+  "snFESX648ESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648E",
+      1
+    ]
+  },
+  "snFESX648ERouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648E",
+      2
+    ]
+  },
+  "snFESX648EPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648EBaseFamily",
+      2
+    ]
+  },
+  "snFESX648EPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648EPrem",
+      1
+    ]
+  },
+  "snFESX648EPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648EPrem",
+      2
+    ]
+  },
+  "snFESX648EPrem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648EPrem",
+      3
+    ]
+  },
+  "snFESX648EPlus1XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648EFamily",
+      2
+    ]
+  },
+  "snFESX648EPlus1XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648EPlus1XGFamily",
+      1
+    ]
+  },
+  "snFESX648EPlus1XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648EPlus1XG",
+      1
+    ]
+  },
+  "snFESX648EPlus1XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648EPlus1XG",
+      2
+    ]
+  },
+  "snFESX648EPlus1XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648EPlus1XGFamily",
+      2
+    ]
+  },
+  "snFESX648EPlus1XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648EPlus1XGPrem",
+      1
+    ]
+  },
+  "snFESX648EPlus1XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648EPlus1XGPrem",
+      2
+    ]
+  },
+  "snFESX648EPlus1XGPrem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648EPlus1XGPrem",
+      3
+    ]
+  },
+  "snFESX648EPlus2XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648EFamily",
+      3
+    ]
+  },
+  "snFESX648EPlus2XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648EPlus2XGFamily",
+      1
+    ]
+  },
+  "snFESX648EPlus2XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648EPlus2XG",
+      1
+    ]
+  },
+  "snFESX648EPlus2XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648EPlus2XG",
+      2
+    ]
+  },
+  "snFESX648EPlus2XGPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648EPlus2XGFamily",
+      2
+    ]
+  },
+  "snFESX648EPlus2XGPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648EPlus2XGPrem",
+      1
+    ]
+  },
+  "snFESX648EPlus2XGPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648EPlus2XGPrem",
+      2
+    ]
+  },
+  "snFESX648EPlus2XGPrem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFESX648EPlus2XGPrem",
+      3
+    ]
+  },
+  "snFWSXFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      35
+    ]
+  },
+  "snFWSX424Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSXFamily",
+      1
+    ]
+  },
+  "snFWSX424BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX424Family",
+      1
+    ]
+  },
+  "snFWSX424": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX424BaseFamily",
+      1
+    ]
+  },
+  "snFWSX424Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX424",
+      1
+    ]
+  },
+  "snFWSX424Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX424",
+      2
+    ]
+  },
+  "snFWSX424Plus1XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX424Family",
+      2
+    ]
+  },
+  "snFWSX424Plus1XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX424Plus1XGFamily",
+      1
+    ]
+  },
+  "snFWSX424Plus1XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX424Plus1XG",
+      1
+    ]
+  },
+  "snFWSX424Plus1XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX424Plus1XG",
+      2
+    ]
+  },
+  "snFWSX424Plus2XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX424Family",
+      3
+    ]
+  },
+  "snFWSX424Plus2XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX424Plus2XGFamily",
+      1
+    ]
+  },
+  "snFWSX424Plus2XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX424Plus2XG",
+      1
+    ]
+  },
+  "snFWSX424Plus2XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX424Plus2XG",
+      2
+    ]
+  },
+  "snFWSX448Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSXFamily",
+      2
+    ]
+  },
+  "snFWSX448BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX448Family",
+      1
+    ]
+  },
+  "snFWSX448": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX448BaseFamily",
+      1
+    ]
+  },
+  "snFWSX448Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX448",
+      1
+    ]
+  },
+  "snFWSX448Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX448",
+      2
+    ]
+  },
+  "snFWSX448Plus1XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX448Family",
+      2
+    ]
+  },
+  "snFWSX448Plus1XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX448Plus1XGFamily",
+      1
+    ]
+  },
+  "snFWSX448Plus1XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX448Plus1XG",
+      1
+    ]
+  },
+  "snFWSX448Plus1XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX448Plus1XG",
+      2
+    ]
+  },
+  "snFWSX448Plus2XGFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX448Family",
+      3
+    ]
+  },
+  "snFWSX448Plus2XG": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX448Plus2XGFamily",
+      1
+    ]
+  },
+  "snFWSX448Plus2XGSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX448Plus2XG",
+      1
+    ]
+  },
+  "snFWSX448Plus2XGRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSX448Plus2XG",
+      2
+    ]
+  },
+  "snFastIronSuperXFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      36
+    ]
+  },
+  "snFastIronSuperX": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperXFamily",
+      1
+    ]
+  },
+  "snFastIronSuperXSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX",
+      1
+    ]
+  },
+  "snFastIronSuperXRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX",
+      2
+    ]
+  },
+  "snFastIronSuperXBaseL3Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX",
+      3
+    ]
+  },
+  "snFastIronSuperXPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperXFamily",
+      2
+    ]
+  },
+  "snFastIronSuperXPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperXPrem",
+      1
+    ]
+  },
+  "snFastIronSuperXPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperXPrem",
+      2
+    ]
+  },
+  "snFastIronSuperXPremBaseL3Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperXPrem",
+      3
+    ]
+  },
+  "snFastIronSuperX800": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperXFamily",
+      3
+    ]
+  },
+  "snFastIronSuperX800Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX800",
+      1
+    ]
+  },
+  "snFastIronSuperX800Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX800",
+      2
+    ]
+  },
+  "snFastIronSuperX800BaseL3Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX800",
+      3
+    ]
+  },
+  "snFastIronSuperX800Prem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperXFamily",
+      4
+    ]
+  },
+  "snFastIronSuperX800PremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX800Prem",
+      1
+    ]
+  },
+  "snFastIronSuperX800PremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX800Prem",
+      2
+    ]
+  },
+  "snFastIronSuperX800PremBaseL3Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX800Prem",
+      3
+    ]
+  },
+  "snFastIronSuperX1600": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperXFamily",
+      5
+    ]
+  },
+  "snFastIronSuperX1600Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX1600",
+      1
+    ]
+  },
+  "snFastIronSuperX1600Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX1600",
+      2
+    ]
+  },
+  "snFastIronSuperX1600BaseL3Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX1600",
+      3
+    ]
+  },
+  "snFastIronSuperX1600Prem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperXFamily",
+      6
+    ]
+  },
+  "snFastIronSuperX1600PremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX1600Prem",
+      1
+    ]
+  },
+  "snFastIronSuperX1600PremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX1600Prem",
+      2
+    ]
+  },
+  "snFastIronSuperX1600PremBaseL3Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX1600Prem",
+      3
+    ]
+  },
+  "snFastIronSuperXV6": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperXFamily",
+      7
+    ]
+  },
+  "snFastIronSuperXV6Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperXV6",
+      1
+    ]
+  },
+  "snFastIronSuperXV6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperXV6",
+      2
+    ]
+  },
+  "snFastIronSuperXV6BaseL3Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperXV6",
+      3
+    ]
+  },
+  "snFastIronSuperXV6Prem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperXFamily",
+      8
+    ]
+  },
+  "snFastIronSuperXV6PremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperXV6Prem",
+      1
+    ]
+  },
+  "snFastIronSuperXV6PremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperXV6Prem",
+      2
+    ]
+  },
+  "snFastIronSuperXV6PremBaseL3Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperXV6Prem",
+      3
+    ]
+  },
+  "snFastIronSuperXV6Prem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperXV6Prem",
+      4
+    ]
+  },
+  "snFastIronSuperX800V6": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperXFamily",
+      9
+    ]
+  },
+  "snFastIronSuperX800V6Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX800V6",
+      1
+    ]
+  },
+  "snFastIronSuperX800V6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX800V6",
+      2
+    ]
+  },
+  "snFastIronSuperX800V6BaseL3Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX800V6",
+      3
+    ]
+  },
+  "snFastIronSuperX800V6Prem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperXFamily",
+      10
+    ]
+  },
+  "snFastIronSuperX800V6PremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX800V6Prem",
+      1
+    ]
+  },
+  "snFastIronSuperX800V6PremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX800V6Prem",
+      2
+    ]
+  },
+  "snFastIronSuperX800V6PremBaseL3Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX800V6Prem",
+      3
+    ]
+  },
+  "snFastIronSuperX800V6Prem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX800V6Prem",
+      4
+    ]
+  },
+  "snFastIronSuperX1600V6": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperXFamily",
+      11
+    ]
+  },
+  "snFastIronSuperX1600V6Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX1600V6",
+      1
+    ]
+  },
+  "snFastIronSuperX1600V6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX1600V6",
+      2
+    ]
+  },
+  "snFastIronSuperX1600V6BaseL3Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX1600V6",
+      3
+    ]
+  },
+  "snFastIronSuperX1600V6Prem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperXFamily",
+      12
+    ]
+  },
+  "snFastIronSuperX1600V6PremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX1600V6Prem",
+      1
+    ]
+  },
+  "snFastIronSuperX1600V6PremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX1600V6Prem",
+      2
+    ]
+  },
+  "snFastIronSuperX1600V6PremBaseL3Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX1600V6Prem",
+      3
+    ]
+  },
+  "snFastIronSuperX1600V6Prem6Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronSuperX1600V6Prem",
+      4
+    ]
+  },
+  "snBigIronSuperXFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      37
+    ]
+  },
+  "snBigIronSuperX": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIronSuperXFamily",
+      1
+    ]
+  },
+  "snBigIronSuperXSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIronSuperX",
+      1
+    ]
+  },
+  "snBigIronSuperXRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIronSuperX",
+      2
+    ]
+  },
+  "snBigIronSuperXBaseL3Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIronSuperX",
+      3
+    ]
+  },
+  "snTurboIronSuperXFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      38
+    ]
+  },
+  "snTurboIronSuperX": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snTurboIronSuperXFamily",
+      1
+    ]
+  },
+  "snTurboIronSuperXSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snTurboIronSuperX",
+      1
+    ]
+  },
+  "snTurboIronSuperXRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snTurboIronSuperX",
+      2
+    ]
+  },
+  "snTurboIronSuperXBaseL3Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snTurboIronSuperX",
+      3
+    ]
+  },
+  "snTurboIronSuperXPrem": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snTurboIronSuperXFamily",
+      2
+    ]
+  },
+  "snTurboIronSuperXPremSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snTurboIronSuperXPrem",
+      1
+    ]
+  },
+  "snTurboIronSuperXPremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snTurboIronSuperXPrem",
+      2
+    ]
+  },
+  "snTurboIronSuperXPremBaseL3Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snTurboIronSuperXPrem",
+      3
+    ]
+  },
+  "snIMRFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      39
+    ]
+  },
+  "snNetIronIMR": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snIMRFamily",
+      1
+    ]
+  },
+  "snNIIMRRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIronIMR",
+      2
+    ]
+  },
+  "snBigIronRXFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      40
+    ]
+  },
+  "snBigIronRX16": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIronRXFamily",
+      1
+    ]
+  },
+  "snBIRX16Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIronRX16",
+      1
+    ]
+  },
+  "snBIRX16Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIronRX16",
+      2
+    ]
+  },
+  "snBigIronRX8": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIronRXFamily",
+      2
+    ]
+  },
+  "snBIRX8Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIronRX8",
+      1
+    ]
+  },
+  "snBIRX8Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIronRX8",
+      2
+    ]
+  },
+  "snBigIronRX4": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIronRXFamily",
+      3
+    ]
+  },
+  "snBIRX4Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIronRX4",
+      1
+    ]
+  },
+  "snBIRX4Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIronRX4",
+      2
+    ]
+  },
+  "snBigIronRX32": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIronRXFamily",
+      4
+    ]
+  },
+  "snBIRX32Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIronRX32",
+      1
+    ]
+  },
+  "snBIRX32Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBigIronRX32",
+      2
+    ]
+  },
+  "snNetIronXMRFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      41
+    ]
+  },
+  "snNetIronXMR16000": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIronXMRFamily",
+      1
+    ]
+  },
+  "snNIXMR16000Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIronXMR16000",
+      2
+    ]
+  },
+  "snNetIronXMR8000": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIronXMRFamily",
+      2
+    ]
+  },
+  "snNIXMR8000Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIronXMR8000",
+      2
+    ]
+  },
+  "snNetIronXMR4000": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIronXMRFamily",
+      3
+    ]
+  },
+  "snNIXMR4000Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIronXMR4000",
+      2
+    ]
+  },
+  "snNetIronXMR32000": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIronXMRFamily",
+      4
+    ]
+  },
+  "snNIXMR32000Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIronXMR32000",
+      2
+    ]
+  },
+  "snSecureIronFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      42
+    ]
+  },
+  "snSecureIronLSFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSecureIronFamily",
+      9
+    ]
+  },
+  "snSecureIronLS100": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSecureIronLSFamily",
+      1
+    ]
+  },
+  "snSecureIronLS100Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSecureIronLS100",
+      1
+    ]
+  },
+  "snSecureIronLS100Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSecureIronLS100",
+      2
+    ]
+  },
+  "snSecureIronLS300": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSecureIronLSFamily",
+      2
+    ]
+  },
+  "snSecureIronLS300Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSecureIronLS300",
+      1
+    ]
+  },
+  "snSecureIronLS300Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSecureIronLS300",
+      2
+    ]
+  },
+  "snSecureIronTMFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSecureIronFamily",
+      10
+    ]
+  },
+  "snSecureIronTM100": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSecureIronTMFamily",
+      1
+    ]
+  },
+  "snSecureIronTM100Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSecureIronTM100",
+      1
+    ]
+  },
+  "snSecureIronTM100Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSecureIronTM100",
+      2
+    ]
+  },
+  "snSecureIronTM300": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSecureIronTMFamily",
+      2
+    ]
+  },
+  "snSecureIronTM300Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSecureIronTM300",
+      1
+    ]
+  },
+  "snSecureIronTM300Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSecureIronTM300",
+      2
+    ]
+  },
+  "snNetIronMLXFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      44
+    ]
+  },
+  "snNetIronMLX16": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIronMLXFamily",
+      1
+    ]
+  },
+  "snNetIronMLX16Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIronMLX16",
+      2
+    ]
+  },
+  "snNetIronMLX8": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIronMLXFamily",
+      2
+    ]
+  },
+  "snNetIronMLX8Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIronMLX8",
+      2
+    ]
+  },
+  "snNetIronMLX4": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIronMLXFamily",
+      3
+    ]
+  },
+  "snNetIronMLX4Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIronMLX4",
+      2
+    ]
+  },
+  "snNetIronMLX32": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIronMLXFamily",
+      4
+    ]
+  },
+  "snNetIronMLX32Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snNetIronMLX32",
+      2
+    ]
+  },
+  "snFGSFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      45
+    ]
+  },
+  "snFGS624Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGSFamily",
+      1
+    ]
+  },
+  "snFGS624PBaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS624Family",
+      1
+    ]
+  },
+  "snFGS624P": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS624PBaseFamily",
+      1
+    ]
+  },
+  "snFGS624PSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS624P",
+      1
+    ]
+  },
+  "snFGS624PRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS624P",
+      2
+    ]
+  },
+  "snFGS624XGPFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS624Family",
+      2
+    ]
+  },
+  "snFGS624XGP": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS624XGPFamily",
+      1
+    ]
+  },
+  "snFGS624XGPSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS624XGP",
+      1
+    ]
+  },
+  "snFGS624XGPRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS624XGP",
+      2
+    ]
+  },
+  "snFGS624PPOEFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS624Family",
+      3
+    ]
+  },
+  "snFGS624PPOE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS624PPOEFamily",
+      1
+    ]
+  },
+  "snFGS624PPOESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS624PPOE",
+      1
+    ]
+  },
+  "snFGS624PPOERouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS624PPOE",
+      2
+    ]
+  },
+  "snFGS624XGPPOEFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS624Family",
+      4
+    ]
+  },
+  "snFGS624XGPPOE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS624XGPPOEFamily",
+      1
+    ]
+  },
+  "snFGS624XGPPOESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS624XGPPOE",
+      1
+    ]
+  },
+  "snFGS624XGPPOERouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS624XGPPOE",
+      2
+    ]
+  },
+  "snFGS648Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGSFamily",
+      2
+    ]
+  },
+  "snFGS648PBaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS648Family",
+      1
+    ]
+  },
+  "snFGS648P": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS648PBaseFamily",
+      1
+    ]
+  },
+  "snFGS648PSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS648P",
+      1
+    ]
+  },
+  "snFGS648PRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS648P",
+      2
+    ]
+  },
+  "snFGS648PPOEFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS648Family",
+      2
+    ]
+  },
+  "snFGS648PPOE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS648PPOEFamily",
+      1
+    ]
+  },
+  "snFGS648PPOESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS648PPOE",
+      1
+    ]
+  },
+  "snFGS648PPOERouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFGS648PPOE",
+      2
+    ]
+  },
+  "snFLSFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      46
+    ]
+  },
+  "snFLS624Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLSFamily",
+      1
+    ]
+  },
+  "snFLS624BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLS624Family",
+      1
+    ]
+  },
+  "snFLS624": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLS624BaseFamily",
+      1
+    ]
+  },
+  "snFLS624Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLS624",
+      1
+    ]
+  },
+  "snFLS624Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLS624",
+      2
+    ]
+  },
+  "snFLS648Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLSFamily",
+      2
+    ]
+  },
+  "snFLS648BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLS648Family",
+      1
+    ]
+  },
+  "snFLS648": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLS648BaseFamily",
+      1
+    ]
+  },
+  "snFLS648Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLS648",
+      1
+    ]
+  },
+  "snFLS648Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLS648",
+      2
+    ]
+  },
+  "snSIFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      47
+    ]
+  },
+  "snSI100": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSIFamily",
+      1
+    ]
+  },
+  "snSI100Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSI100",
+      1
+    ]
+  },
+  "snSI100Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSI100",
+      2
+    ]
+  },
+  "snSI350": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSIFamily",
+      2
+    ]
+  },
+  "snSI350Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSI350",
+      1
+    ]
+  },
+  "snSI350Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSI350",
+      2
+    ]
+  },
+  "snSI450": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSIFamily",
+      3
+    ]
+  },
+  "snSI450Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSI450",
+      1
+    ]
+  },
+  "snSI450Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSI450",
+      2
+    ]
+  },
+  "snSI850": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSIFamily",
+      4
+    ]
+  },
+  "snSI850Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSI850",
+      1
+    ]
+  },
+  "snSI850Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSI850",
+      2
+    ]
+  },
+  "snSI350Plus": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSIFamily",
+      5
+    ]
+  },
+  "snSI350PlusSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSI350Plus",
+      1
+    ]
+  },
+  "snSI350PlusRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSI350Plus",
+      2
+    ]
+  },
+  "snSI450Plus": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSIFamily",
+      6
+    ]
+  },
+  "snSI450PlusSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSI450Plus",
+      1
+    ]
+  },
+  "snSI450PlusRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSI450Plus",
+      2
+    ]
+  },
+  "snSI850Plus": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSIFamily",
+      7
+    ]
+  },
+  "snSI850PlusSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSI850Plus",
+      1
+    ]
+  },
+  "snSI850PlusRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSI850Plus",
+      2
+    ]
+  },
+  "snServerIronGTc": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSIFamily",
+      8
+    ]
+  },
+  "snServerIronGTcSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snServerIronGTc",
+      1
+    ]
+  },
+  "snServerIronGTcRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snServerIronGTc",
+      2
+    ]
+  },
+  "snServerIronGTe": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSIFamily",
+      9
+    ]
+  },
+  "snServerIronGTeSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snServerIronGTe",
+      1
+    ]
+  },
+  "snServerIronGTeRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snServerIronGTe",
+      2
+    ]
+  },
+  "snServerIronGTePlus": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSIFamily",
+      10
+    ]
+  },
+  "snServerIronGTePlusSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snServerIronGTePlus",
+      1
+    ]
+  },
+  "snServerIronGTePlusRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snServerIronGTePlus",
+      2
+    ]
+  },
+  "snServerIron4G": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSIFamily",
+      11
+    ]
+  },
+  "snServerIron4GSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snServerIron4G",
+      1
+    ]
+  },
+  "snServerIron4GRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snServerIron4G",
+      2
+    ]
+  },
+  "serverIronAdx1000": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSIFamily",
+      12
+    ]
+  },
+  "serverIronAdx1000Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "serverIronAdx1000",
+      1
+    ]
+  },
+  "serverIronAdx1000Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "serverIronAdx1000",
+      2
+    ]
+  },
+  "serverIronAdx1000Ssl": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSIFamily",
+      13
+    ]
+  },
+  "serverIronAdx1000SslSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "serverIronAdx1000Ssl",
+      1
+    ]
+  },
+  "serverIronAdx1000SslRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "serverIronAdx1000Ssl",
+      2
+    ]
+  },
+  "serverIronAdx4000": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSIFamily",
+      14
+    ]
+  },
+  "serverIronAdx4000Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "serverIronAdx4000",
+      1
+    ]
+  },
+  "serverIronAdx4000Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "serverIronAdx4000",
+      2
+    ]
+  },
+  "serverIronAdx4000Ssl": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSIFamily",
+      15
+    ]
+  },
+  "serverIronAdx4000SslSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "serverIronAdx4000Ssl",
+      1
+    ]
+  },
+  "serverIronAdx4000SslRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "serverIronAdx4000Ssl",
+      2
+    ]
+  },
+  "serverIronAdx8000": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSIFamily",
+      16
+    ]
+  },
+  "serverIronAdx8000Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "serverIronAdx8000",
+      1
+    ]
+  },
+  "serverIronAdx8000Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "serverIronAdx8000",
+      2
+    ]
+  },
+  "serverIronAdx8000Ssl": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSIFamily",
+      17
+    ]
+  },
+  "serverIronAdx8000SslSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "serverIronAdx8000Ssl",
+      1
+    ]
+  },
+  "serverIronAdx8000SslRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "serverIronAdx8000Ssl",
+      2
+    ]
+  },
+  "serverIronAdx10000": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSIFamily",
+      18
+    ]
+  },
+  "serverIronAdx10000Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "serverIronAdx10000",
+      1
+    ]
+  },
+  "serverIronAdx10000Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "serverIronAdx10000",
+      2
+    ]
+  },
+  "serverIronAdx10000Ssl": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snSIFamily",
+      19
+    ]
+  },
+  "serverIronAdx10000SslSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "serverIronAdx10000Ssl",
+      1
+    ]
+  },
+  "serverIronAdx10000SslRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "serverIronAdx10000Ssl",
+      2
+    ]
+  },
+  "snFastIronStackFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      48
+    ]
+  },
+  "snFastIronStack": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackFamily",
+      1
+    ]
+  },
+  "snFastIronStackSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStack",
+      1
+    ]
+  },
+  "snFastIronStackRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStack",
+      2
+    ]
+  },
+  "snFastIronStackFCX": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackFamily",
+      2
+    ]
+  },
+  "snFastIronStackFCXSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackFCX",
+      1
+    ]
+  },
+  "snFastIronStackFCXBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackFCX",
+      2
+    ]
+  },
+  "snFastIronStackFCXRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackFCX",
+      3
+    ]
+  },
+  "snFastIronStackFCXAdvRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackFCX",
+      4
+    ]
+  },
+  "snFastIronStackICX6610": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackFamily",
+      3
+    ]
+  },
+  "snFastIronStackICX6610Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackICX6610",
+      1
+    ]
+  },
+  "snFastIronStackICX6610BaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackICX6610",
+      2
+    ]
+  },
+  "snFastIronStackICX6610Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackICX6610",
+      3
+    ]
+  },
+  "snFastIronStackICX6610PRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackICX6610",
+      4
+    ]
+  },
+  "snFastIronStackICX6610ARouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackICX6610",
+      5
+    ]
+  },
+  "snFastIronStackICX6430": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackFamily",
+      4
+    ]
+  },
+  "snFastIronStackICX6430Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackICX6430",
+      1
+    ]
+  },
+  "snFastIronStackICX6450": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackFamily",
+      5
+    ]
+  },
+  "snFastIronStackICX6450Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackICX6450",
+      1
+    ]
+  },
+  "snFastIronStackICX6450BaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackICX6450",
+      2
+    ]
+  },
+  "snFastIronStackICX6450Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackICX6450",
+      3
+    ]
+  },
+  "snFastIronStackICX6450PRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackICX6450",
+      4
+    ]
+  },
+  "snFastIronStackMixedStack": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackFamily",
+      6
+    ]
+  },
+  "snFastIronStackMixedStackSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackMixedStack",
+      1
+    ]
+  },
+  "snFastIronStackMixedStackBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackMixedStack",
+      2
+    ]
+  },
+  "snFastIronStackMixedStackRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackMixedStack",
+      3
+    ]
+  },
+  "snFastIronStackMixedStackPRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackMixedStack",
+      4
+    ]
+  },
+  "snFastIronStackMixedStackARouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackMixedStack",
+      5
+    ]
+  },
+  "snFastIronStackICX7750": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackFamily",
+      7
+    ]
+  },
+  "snFastIronStackICX7750Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackICX7750",
+      1
+    ]
+  },
+  "snFastIronStackICX7750BaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackICX7750",
+      2
+    ]
+  },
+  "snFastIronStackICX7750Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackICX7750",
+      3
+    ]
+  },
+  "snFastIronStackICX7450": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackFamily",
+      8
+    ]
+  },
+  "snFastIronStackICX7450Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackICX7450",
+      1
+    ]
+  },
+  "snFastIronStackICX7450BaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackICX7450",
+      2
+    ]
+  },
+  "snFastIronStackICX7450Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackICX7450",
+      3
+    ]
+  },
+  "snFastIronStackICX7250": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackFamily",
+      9
+    ]
+  },
+  "snFastIronStackICX7250Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackICX7250",
+      1
+    ]
+  },
+  "snFastIronStackICX7250BaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackICX7250",
+      2
+    ]
+  },
+  "snFastIronStackICX7250Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFastIronStackICX7250",
+      3
+    ]
+  },
+  "snCes2000Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      49
+    ]
+  },
+  "snCes2024F": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snCes2000Family",
+      1
+    ]
+  },
+  "snCes2024C": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snCes2000Family",
+      2
+    ]
+  },
+  "snCes2048F": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snCes2000Family",
+      3
+    ]
+  },
+  "snCes2048C": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snCes2000Family",
+      4
+    ]
+  },
+  "snCes2048FX": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snCes2000Family",
+      5
+    ]
+  },
+  "snCes2048CX": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snCes2000Family",
+      6
+    ]
+  },
+  "snFLSLCFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      50
+    ]
+  },
+  "snFLSLC624Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLSLCFamily",
+      1
+    ]
+  },
+  "snFLSLC624BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLSLC624Family",
+      1
+    ]
+  },
+  "snFLSLC624": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLSLC624BaseFamily",
+      1
+    ]
+  },
+  "snFLSLC624Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLSLC624",
+      1
+    ]
+  },
+  "snFLSLC624Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLSLC624",
+      2
+    ]
+  },
+  "snFLSLC624POEFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLSLC624Family",
+      2
+    ]
+  },
+  "snFLSLC624POE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLSLC624POEFamily",
+      1
+    ]
+  },
+  "snFLSLC624POESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLSLC624POE",
+      1
+    ]
+  },
+  "snFLSLC624POERouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLSLC624POE",
+      2
+    ]
+  },
+  "snFLSLC648Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLSLCFamily",
+      2
+    ]
+  },
+  "snFLSLC648BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLSLC648Family",
+      1
+    ]
+  },
+  "snFLSLC648": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLSLC648BaseFamily",
+      1
+    ]
+  },
+  "snFLSLC648Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLSLC648",
+      1
+    ]
+  },
+  "snFLSLC648Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLSLC648",
+      2
+    ]
+  },
+  "snFLSLC648POEFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLSLC648Family",
+      2
+    ]
+  },
+  "snFLSLC648POE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLSLC648POEFamily",
+      1
+    ]
+  },
+  "snFLSLC648POESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLSLC648POE",
+      1
+    ]
+  },
+  "snFLSLC648POERouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFLSLC648POE",
+      2
+    ]
+  },
+  "snCer2000Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      51
+    ]
+  },
+  "snCer2024F": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snCer2000Family",
+      1
+    ]
+  },
+  "snCer2024C": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snCer2000Family",
+      2
+    ]
+  },
+  "snCer2048F": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snCer2000Family",
+      3
+    ]
+  },
+  "snCer2048C": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snCer2000Family",
+      4
+    ]
+  },
+  "snCer2048FX": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snCer2000Family",
+      5
+    ]
+  },
+  "snCer2048CX": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snCer2000Family",
+      6
+    ]
+  },
+  "snFWSFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      52
+    ]
+  },
+  "snFWS624Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSFamily",
+      1
+    ]
+  },
+  "snFWS624BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS624Family",
+      1
+    ]
+  },
+  "snFWS624": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS624BaseFamily",
+      1
+    ]
+  },
+  "snFWS624Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS624",
+      1
+    ]
+  },
+  "snFWS624BaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS624",
+      2
+    ]
+  },
+  "snFWS624EdgePremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS624",
+      3
+    ]
+  },
+  "snFWS624GFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS624Family",
+      2
+    ]
+  },
+  "snFWS624G": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS624GFamily",
+      1
+    ]
+  },
+  "snFWS624GSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS624G",
+      1
+    ]
+  },
+  "snFWS624GBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS624G",
+      2
+    ]
+  },
+  "snFWS624GEdgePremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS624G",
+      3
+    ]
+  },
+  "snFWS624POEFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS624Family",
+      3
+    ]
+  },
+  "snFWS624POE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS624POEFamily",
+      1
+    ]
+  },
+  "snFWS624POESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS624POE",
+      1
+    ]
+  },
+  "snFWS624POEBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS624POE",
+      2
+    ]
+  },
+  "snFWS624POEEdgePremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS624POE",
+      3
+    ]
+  },
+  "snFWS624GPOEFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS624Family",
+      4
+    ]
+  },
+  "snFWS624GPOE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS624GPOEFamily",
+      1
+    ]
+  },
+  "snFWS624GPOESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS624GPOE",
+      1
+    ]
+  },
+  "snFWS624GPOEBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS624GPOE",
+      2
+    ]
+  },
+  "snFWS624GPOEEdgePremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS624GPOE",
+      3
+    ]
+  },
+  "snFWS648Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWSFamily",
+      2
+    ]
+  },
+  "snFWS648BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS648Family",
+      1
+    ]
+  },
+  "snFWS648": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS648BaseFamily",
+      1
+    ]
+  },
+  "snFWS648Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS648",
+      1
+    ]
+  },
+  "snFWS648BaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS648",
+      2
+    ]
+  },
+  "snFWS648EdgePremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS648",
+      3
+    ]
+  },
+  "snFWS648GFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS648Family",
+      2
+    ]
+  },
+  "snFWS648G": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS648GFamily",
+      1
+    ]
+  },
+  "snFWS648GSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS648G",
+      1
+    ]
+  },
+  "snFWS648GBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS648G",
+      2
+    ]
+  },
+  "snFWS648GEdgePremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS648G",
+      3
+    ]
+  },
+  "snFWS648POEFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS648Family",
+      3
+    ]
+  },
+  "snFWS648POE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS648POEFamily",
+      1
+    ]
+  },
+  "snFWS648POESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS648POE",
+      1
+    ]
+  },
+  "snFWS648POEBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS648POE",
+      2
+    ]
+  },
+  "snFWS648POEEdgePremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS648POE",
+      3
+    ]
+  },
+  "snFWS648GPOEFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS648Family",
+      4
+    ]
+  },
+  "snFWS648GPOE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS648GPOEFamily",
+      1
+    ]
+  },
+  "snFWS648GPOESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS648GPOE",
+      1
+    ]
+  },
+  "snFWS648GPOEBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS648GPOE",
+      2
+    ]
+  },
+  "snFWS648GPOEEdgePremRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFWS648GPOE",
+      3
+    ]
+  },
+  "snTurboIron2": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      53
+    ]
+  },
+  "snTI2X24Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snTurboIron2",
+      1
+    ]
+  },
+  "snTI2X24Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snTI2X24Family",
+      1
+    ]
+  },
+  "snTI2X24Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snTI2X24Family",
+      2
+    ]
+  },
+  "snTI2X48Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snTurboIron2",
+      2
+    ]
+  },
+  "snTI2X48Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snTI2X48Family",
+      1
+    ]
+  },
+  "snTI2X48Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snTI2X48Family",
+      2
+    ]
+  },
+  "snFCXFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      54
+    ]
+  },
+  "snFCX624Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCXFamily",
+      1
+    ]
+  },
+  "snFCX624SBaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624Family",
+      1
+    ]
+  },
+  "snFCX624S": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624SBaseFamily",
+      1
+    ]
+  },
+  "snFCX624SSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624S",
+      1
+    ]
+  },
+  "snFCX624SBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624S",
+      2
+    ]
+  },
+  "snFCX624SRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624S",
+      3
+    ]
+  },
+  "snFCX624SAdvRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624S",
+      4
+    ]
+  },
+  "snFCX624SHPOEFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624Family",
+      2
+    ]
+  },
+  "snFCX624SHPOE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624SHPOEFamily",
+      1
+    ]
+  },
+  "snFCX624SHPOESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624SHPOE",
+      1
+    ]
+  },
+  "snFCX624SHPOEBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624SHPOE",
+      2
+    ]
+  },
+  "snFCX624SHPOERouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624SHPOE",
+      3
+    ]
+  },
+  "snFCX624SHPOEAdvRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624SHPOE",
+      4
+    ]
+  },
+  "snFCX624SFFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624Family",
+      3
+    ]
+  },
+  "snFCX624SF": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624SFFamily",
+      1
+    ]
+  },
+  "snFCX624SFSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624SF",
+      1
+    ]
+  },
+  "snFCX624SFBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624SF",
+      2
+    ]
+  },
+  "snFCX624SFRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624SF",
+      3
+    ]
+  },
+  "snFCX624SFAdvRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624SF",
+      4
+    ]
+  },
+  "snFCX624BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624Family",
+      4
+    ]
+  },
+  "snFCX624": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624BaseFamily",
+      1
+    ]
+  },
+  "snFCX624Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624",
+      1
+    ]
+  },
+  "snFCX624BaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624",
+      2
+    ]
+  },
+  "snFCX624Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624",
+      3
+    ]
+  },
+  "snFCX624AdvRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX624",
+      4
+    ]
+  },
+  "snFCX648Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCXFamily",
+      2
+    ]
+  },
+  "snFCX648SBaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX648Family",
+      1
+    ]
+  },
+  "snFCX648S": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX648SBaseFamily",
+      1
+    ]
+  },
+  "snFCX648SSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX648S",
+      1
+    ]
+  },
+  "snFCX648SBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX648S",
+      2
+    ]
+  },
+  "snFCX648SRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX648S",
+      3
+    ]
+  },
+  "snFCX648SAdvRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX648S",
+      4
+    ]
+  },
+  "snFCX648SHPOEFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX648Family",
+      2
+    ]
+  },
+  "snFCX648SHPOE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX648SHPOEFamily",
+      1
+    ]
+  },
+  "snFCX648SHPOESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX648SHPOE",
+      1
+    ]
+  },
+  "snFCX648SHPOEBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX648SHPOE",
+      2
+    ]
+  },
+  "snFCX648SHPOERouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX648SHPOE",
+      3
+    ]
+  },
+  "snFCX648SHPOEAdvRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX648SHPOE",
+      4
+    ]
+  },
+  "snFCX648BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX648Family",
+      4
+    ]
+  },
+  "snFCX648": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX648BaseFamily",
+      1
+    ]
+  },
+  "snFCX648Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX648",
+      1
+    ]
+  },
+  "snFCX648BaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX648",
+      2
+    ]
+  },
+  "snFCX648Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX648",
+      3
+    ]
+  },
+  "snFCX648AdvRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snFCX648",
+      4
+    ]
+  },
+  "snICX6610Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      56
+    ]
+  },
+  "snICX661024Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX6610Family",
+      1
+    ]
+  },
+  "snICX661024BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661024Family",
+      1
+    ]
+  },
+  "snICX661024": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661024BaseFamily",
+      1
+    ]
+  },
+  "snICX661024Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661024",
+      1
+    ]
+  },
+  "snICX661024BaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661024",
+      2
+    ]
+  },
+  "snICX661024Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661024",
+      3
+    ]
+  },
+  "snICX661024PRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661024",
+      4
+    ]
+  },
+  "snICX661024ARouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661024",
+      5
+    ]
+  },
+  "snICX661024HPOEFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661024Family",
+      2
+    ]
+  },
+  "snICX661024HPOE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661024HPOEFamily",
+      1
+    ]
+  },
+  "snICX661024HPOESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661024HPOE",
+      1
+    ]
+  },
+  "snICX661024HPOEBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661024HPOE",
+      2
+    ]
+  },
+  "snICX661024HPOERouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661024HPOE",
+      3
+    ]
+  },
+  "snICX661024HPOEPRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661024HPOE",
+      4
+    ]
+  },
+  "snICX661024HPOEARouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661024HPOE",
+      5
+    ]
+  },
+  "snICX661024FFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661024Family",
+      3
+    ]
+  },
+  "snICX661024F": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661024FFamily",
+      1
+    ]
+  },
+  "snICX661024FSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661024F",
+      1
+    ]
+  },
+  "snICX661024FBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661024F",
+      2
+    ]
+  },
+  "snICX661024FRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661024F",
+      3
+    ]
+  },
+  "snICX661024FPRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661024F",
+      4
+    ]
+  },
+  "snICX661024FARouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661024F",
+      5
+    ]
+  },
+  "snICX661048Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX6610Family",
+      2
+    ]
+  },
+  "snICX661048BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661048Family",
+      1
+    ]
+  },
+  "snICX661048": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661048BaseFamily",
+      1
+    ]
+  },
+  "snICX661048Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661048",
+      1
+    ]
+  },
+  "snICX661048BaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661048",
+      2
+    ]
+  },
+  "snICX661048Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661048",
+      3
+    ]
+  },
+  "snICX661048PRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661048",
+      4
+    ]
+  },
+  "snICX661048ARouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661048",
+      5
+    ]
+  },
+  "snICX661048HPOEFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661048Family",
+      2
+    ]
+  },
+  "snICX661048HPOE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661048HPOEFamily",
+      1
+    ]
+  },
+  "snICX661048HPOESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661048HPOE",
+      1
+    ]
+  },
+  "snICX661048HPOEBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661048HPOE",
+      2
+    ]
+  },
+  "snICX661048HPOERouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661048HPOE",
+      3
+    ]
+  },
+  "snICX661048HPOEPRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661048HPOE",
+      4
+    ]
+  },
+  "snICX661048HPOEARouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX661048HPOE",
+      5
+    ]
+  },
+  "snICX6430Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      57
+    ]
+  },
+  "snICX643024Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX6430Family",
+      1
+    ]
+  },
+  "snICX643024BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX643024Family",
+      1
+    ]
+  },
+  "snICX643024": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX643024BaseFamily",
+      1
+    ]
+  },
+  "snICX643024Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX643024",
+      1
+    ]
+  },
+  "snICX643024HPOEFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX643024Family",
+      2
+    ]
+  },
+  "snICX643024HPOE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX643024HPOEFamily",
+      1
+    ]
+  },
+  "snICX643024HPOESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX643024HPOE",
+      1
+    ]
+  },
+  "snICX643048Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX6430Family",
+      2
+    ]
+  },
+  "snICX643048BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX643048Family",
+      1
+    ]
+  },
+  "snICX643048": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX643048BaseFamily",
+      1
+    ]
+  },
+  "snICX643048Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX643048",
+      1
+    ]
+  },
+  "snICX643048HPOEFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX643048Family",
+      2
+    ]
+  },
+  "snICX643048HPOE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX643048HPOEFamily",
+      1
+    ]
+  },
+  "snICX643048HPOESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX643048HPOE",
+      1
+    ]
+  },
+  "snICX6430C12Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX6430Family",
+      3
+    ]
+  },
+  "snICX6430C12BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX6430C12Family",
+      1
+    ]
+  },
+  "snICX6430C12": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX6430C12BaseFamily",
+      1
+    ]
+  },
+  "snICX6430C12Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX6430C12",
+      1
+    ]
+  },
+  "snICX6450Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      58
+    ]
+  },
+  "snICX645024Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX6450Family",
+      1
+    ]
+  },
+  "snICX645024BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645024Family",
+      1
+    ]
+  },
+  "snICX645024": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645024BaseFamily",
+      1
+    ]
+  },
+  "snICX645024Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645024",
+      1
+    ]
+  },
+  "snICX645024BaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645024",
+      2
+    ]
+  },
+  "snICX645024Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645024",
+      3
+    ]
+  },
+  "snICX645024PRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645024",
+      4
+    ]
+  },
+  "snICX645024HPOEFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645024Family",
+      2
+    ]
+  },
+  "snICX645024HPOE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645024HPOEFamily",
+      1
+    ]
+  },
+  "snICX645024HPOESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645024HPOE",
+      1
+    ]
+  },
+  "snICX645024HPOEBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645024HPOE",
+      2
+    ]
+  },
+  "snICX645024HPOERouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645024HPOE",
+      3
+    ]
+  },
+  "snICX645024HPOEPRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645024HPOE",
+      4
+    ]
+  },
+  "snICX645048Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX6450Family",
+      2
+    ]
+  },
+  "snICX645048BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645048Family",
+      1
+    ]
+  },
+  "snICX645048": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645048BaseFamily",
+      1
+    ]
+  },
+  "snICX645048Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645048",
+      1
+    ]
+  },
+  "snICX645048BaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645048",
+      2
+    ]
+  },
+  "snICX645048Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645048",
+      3
+    ]
+  },
+  "snICX645048PRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645048",
+      4
+    ]
+  },
+  "snICX645048HPOEFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645048Family",
+      2
+    ]
+  },
+  "snICX645048HPOE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645048HPOEFamily",
+      1
+    ]
+  },
+  "snICX645048HPOESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645048HPOE",
+      1
+    ]
+  },
+  "snICX645048HPOEBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645048HPOE",
+      2
+    ]
+  },
+  "snICX645048HPOERouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645048HPOE",
+      3
+    ]
+  },
+  "snICX645048HPOEPRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX645048HPOE",
+      4
+    ]
+  },
+  "snICX6450C12PDFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX6450Family",
+      3
+    ]
+  },
+  "snICX6450C12PDBaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX6450C12PDFamily",
+      1
+    ]
+  },
+  "snICX6450C12PD": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX6450C12PDBaseFamily",
+      1
+    ]
+  },
+  "snICX6450C12PDSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX6450C12PD",
+      1
+    ]
+  },
+  "snICX6450C12PDBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX6450C12PD",
+      2
+    ]
+  },
+  "snICX6450C12PDRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX6450C12PD",
+      3
+    ]
+  },
+  "snICX6450C12PDPRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX6450C12PD",
+      4
+    ]
+  },
+  "snICX6650Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      59
+    ]
+  },
+  "snICX665064Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX6650Family",
+      1
+    ]
+  },
+  "snICX665064BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX665064Family",
+      1
+    ]
+  },
+  "snICX665064": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX665064BaseFamily",
+      1
+    ]
+  },
+  "snICX665064Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX665064",
+      1
+    ]
+  },
+  "snICX665064BaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX665064",
+      2
+    ]
+  },
+  "snICX665064Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX665064",
+      3
+    ]
+  },
+  "snICX7750Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      60
+    ]
+  },
+  "snICX775048CFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX7750Family",
+      1
+    ]
+  },
+  "snICX775048CBaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX775048CFamily",
+      1
+    ]
+  },
+  "snICX775048C": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX775048CBaseFamily",
+      1
+    ]
+  },
+  "snICX775048CSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX775048C",
+      1
+    ]
+  },
+  "snICX775048CBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX775048C",
+      2
+    ]
+  },
+  "snICX775048CRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX775048C",
+      3
+    ]
+  },
+  "snICX775048FFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX7750Family",
+      2
+    ]
+  },
+  "snICX775048FBaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX775048FFamily",
+      1
+    ]
+  },
+  "snICX775048F": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX775048FBaseFamily",
+      1
+    ]
+  },
+  "snICX775048FSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX775048F",
+      1
+    ]
+  },
+  "snICX775048FBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX775048F",
+      2
+    ]
+  },
+  "snICX775048FRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX775048F",
+      3
+    ]
+  },
+  "snICX775026QFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX7750Family",
+      3
+    ]
+  },
+  "snICX775026QBaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX775026QFamily",
+      1
+    ]
+  },
+  "snICX775026Q": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX775026QBaseFamily",
+      1
+    ]
+  },
+  "snICX775026QSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX775026Q",
+      1
+    ]
+  },
+  "snICX775026QBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX775026Q",
+      2
+    ]
+  },
+  "snICX775026QRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX775026Q",
+      3
+    ]
+  },
+  "snICX7450Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      61
+    ]
+  },
+  "snICX745024Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX7450Family",
+      1
+    ]
+  },
+  "snICX745024BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745024Family",
+      1
+    ]
+  },
+  "snICX745024": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745024BaseFamily",
+      1
+    ]
+  },
+  "snICX745024Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745024",
+      1
+    ]
+  },
+  "snICX745024BaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745024",
+      2
+    ]
+  },
+  "snICX745024Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745024",
+      3
+    ]
+  },
+  "snICX745024HPOEFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745024Family",
+      2
+    ]
+  },
+  "snICX745024HPOE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745024HPOEFamily",
+      1
+    ]
+  },
+  "snICX745024HPOESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745024HPOE",
+      1
+    ]
+  },
+  "snICX745024HPOEBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745024HPOE",
+      2
+    ]
+  },
+  "snICX745024HPOERouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745024HPOE",
+      3
+    ]
+  },
+  "snICX745048Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX7450Family",
+      2
+    ]
+  },
+  "snICX745048BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745048Family",
+      1
+    ]
+  },
+  "snICX745048": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745048BaseFamily",
+      1
+    ]
+  },
+  "snICX745048Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745048",
+      1
+    ]
+  },
+  "snICX745048BaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745048",
+      2
+    ]
+  },
+  "snICX745048Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745048",
+      3
+    ]
+  },
+  "snICX745048HPOEBaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745048Family",
+      2
+    ]
+  },
+  "snICX745048HPOE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745048HPOEBaseFamily",
+      1
+    ]
+  },
+  "snICX745048HPOESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745048HPOE",
+      1
+    ]
+  },
+  "snICX745048HPOEBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745048HPOE",
+      2
+    ]
+  },
+  "snICX745048HPOERouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745048HPOE",
+      3
+    ]
+  },
+  "snICX745048FBaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745048Family",
+      3
+    ]
+  },
+  "snICX745048F": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745048FBaseFamily",
+      1
+    ]
+  },
+  "snICX745048FSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745048F",
+      1
+    ]
+  },
+  "snICX745048FBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745048F",
+      2
+    ]
+  },
+  "snICX745048FRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX745048F",
+      3
+    ]
+  },
+  "snICX7250Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "registration",
+      62
+    ]
+  },
+  "snICX725024Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX7250Family",
+      1
+    ]
+  },
+  "snICX725024BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725024Family",
+      1
+    ]
+  },
+  "snICX725024": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725024BaseFamily",
+      1
+    ]
+  },
+  "snICX725024Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725024",
+      1
+    ]
+  },
+  "snICX725024BaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725024",
+      2
+    ]
+  },
+  "snICX725024Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725024",
+      3
+    ]
+  },
+  "snICX725024HPOEFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725024Family",
+      2
+    ]
+  },
+  "snICX725024HPOE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725024HPOEFamily",
+      1
+    ]
+  },
+  "snICX725024HPOESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725024HPOE",
+      1
+    ]
+  },
+  "snICX725024HPOEBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725024HPOE",
+      2
+    ]
+  },
+  "snICX725024HPOERouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725024HPOE",
+      3
+    ]
+  },
+  "snICX725024GFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725024Family",
+      3
+    ]
+  },
+  "snICX725024G": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725024GFamily",
+      1
+    ]
+  },
+  "snICX725024GSwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725024G",
+      1
+    ]
+  },
+  "snICX725024GBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725024G",
+      2
+    ]
+  },
+  "snICX725024GRouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725024G",
+      3
+    ]
+  },
+  "snICX725048Family": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX7250Family",
+      2
+    ]
+  },
+  "snICX725048BaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725048Family",
+      1
+    ]
+  },
+  "snICX725048": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725048BaseFamily",
+      1
+    ]
+  },
+  "snICX725048Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725048",
+      1
+    ]
+  },
+  "snICX725048BaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725048",
+      2
+    ]
+  },
+  "snICX725048Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725048",
+      3
+    ]
+  },
+  "snICX725048HPOEBaseFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725048Family",
+      2
+    ]
+  },
+  "snICX725048HPOE": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725048HPOEBaseFamily",
+      1
+    ]
+  },
+  "snICX725048HPOESwitch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725048HPOE",
+      1
+    ]
+  },
+  "snICX725048HPOEBaseL3Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725048HPOE",
+      2
+    ]
+  },
+  "snICX725048HPOERouter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snICX725048HPOE",
+      3
+    ]
+  },
+  "edgeIron": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "products",
+      4
+    ]
+  },
+  "edgeIronMib": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "edgeIron",
+      1
+    ]
+  },
+  "edgeIronType2": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "products",
+      5
+    ]
+  },
+  "edgeIronType2Mib": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "edgeIronType2",
+      1
+    ]
+  },
+  "wirelessAp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "products",
+      6
+    ]
+  },
+  "wirelessProbe": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "products",
+      7
+    ]
+  },
+  "accessIron": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "products",
+      8
+    ]
+  },
+  "serverIronSA": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "products",
+      9
+    ]
+  },
+  "wirelessApplication": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "products",
+      10
+    ]
+  },
+  "wirelessLocation": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "wirelessApplication",
+      1
+    ]
+  },
+  "ironPointMobility": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "products",
+      11
+    ]
+  },
+  "ironPointMC": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ironPointMobility",
+      1
+    ]
+  },
+  "netIronMtuCpeFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "products",
+      12
+    ]
+  },
+  "netIronM2404": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "netIronMtuCpeFamily",
+      1
+    ]
+  },
+  "ironView": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "products",
+      13
+    ]
+  },
+  "platform": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "products",
+      14
+    ]
+  },
+  "ironPointWireless": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "products",
+      15
+    ]
+  },
+  "ironPointWirelessRFS": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ironPointWireless",
+      1
+    ]
+  },
+  "ironPointWirelessAP": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ironPointWireless",
+      2
+    ]
+  },
+  "ethernetAccessSwitchFamily": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "products",
+      16
+    ]
+  },
+  "ethernetAccessSwitchBr6910": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ethernetAccessSwitchFamily",
+      1
+    ]
+  },
+  "digitalChina": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "vendors",
+      1
+    ]
+  },
+  "dcrs7504": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "digitalChina",
+      1
+    ]
+  },
+  "dcrs7504Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "dcrs7504",
+      1
+    ]
+  },
+  "dcrs7504Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "dcrs7504",
+      2
+    ]
+  },
+  "dcrs7508": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "digitalChina",
+      2
+    ]
+  },
+  "dcrs7508Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "dcrs7508",
+      1
+    ]
+  },
+  "dcrs7508Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "dcrs7508",
+      2
+    ]
+  },
+  "dcrs7515": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "digitalChina",
+      3
+    ]
+  },
+  "dcrs7515Switch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "dcrs7515",
+      1
+    ]
+  },
+  "dcrs7515Router": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "dcrs7515",
+      2
+    ]
+  },
+  "experimental": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "foundry",
+      3
+    ]
+  },
+  "pwe3": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "experimental",
+      1
+    ]
+  },
+  "l3vpn": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "experimental",
+      2
+    ]
+  },
+  "bfd": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "experimental",
+      3
+    ]
+  },
+  "vplsRoot": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "experimental",
+      4
+    ]
+  },
+  "bgp4V2Root": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "experimental",
+      5
+    ]
+  }
+}

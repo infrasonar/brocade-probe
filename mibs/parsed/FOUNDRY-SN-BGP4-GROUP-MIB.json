@@ -1,0 +1,3427 @@
+{
+  "IMPORTS": [
+    [
+      "RFC1155-SMI",
+      [
+        "Counter",
+        "Gauge",
+        "IpAddress"
+      ]
+    ],
+    [
+      "RFC-1212",
+      [
+        "OBJECT-TYPE"
+      ]
+    ],
+    [
+      "FOUNDRY-SN-ROOT-MIB",
+      [
+        "snBgp4"
+      ]
+    ]
+  ],
+  "snBgp4Gen": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBgp4",
+      1
+    ]
+  },
+  "snBgp4AddrFilter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBgp4",
+      2
+    ]
+  },
+  "snBgp4AggregateAddr": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBgp4",
+      3
+    ]
+  },
+  "snBgp4AsPathFilter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBgp4",
+      4
+    ]
+  },
+  "snBgp4CommunityFilter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBgp4",
+      5
+    ]
+  },
+  "snBgp4NeighGenCfg": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBgp4",
+      6
+    ]
+  },
+  "snBgp4NeighDistGroup": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBgp4",
+      7
+    ]
+  },
+  "snBgp4NeighFilterGroup": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBgp4",
+      8
+    ]
+  },
+  "snBgp4NeighRouteMap": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBgp4",
+      9
+    ]
+  },
+  "snBgp4Network": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBgp4",
+      10
+    ]
+  },
+  "snBgp4Redis": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBgp4",
+      11
+    ]
+  },
+  "snBgp4RouteMapFilter": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBgp4",
+      12
+    ]
+  },
+  "snBgp4RouteMapMatch": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBgp4",
+      13
+    ]
+  },
+  "snBgp4RouteMapSet": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBgp4",
+      14
+    ]
+  },
+  "snBgp4NeighOperStatus": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBgp4",
+      15
+    ]
+  },
+  "snBgp4RouteOperStatus": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBgp4",
+      16
+    ]
+  },
+  "snBgp4NeighborSummary": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBgp4",
+      17
+    ]
+  },
+  "snBgp4Attribute": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBgp4",
+      18
+    ]
+  },
+  "snBgp4ClearNeighborCmd": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBgp4",
+      19
+    ]
+  },
+  "snBgp4NeighPrefixGroup": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "snBgp4",
+      20
+    ]
+  },
+  "snBgp4GenAlwaysCompareMed": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "disabled",
+        "1": "enabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      1
+    ]
+  },
+  "snBgp4GenAutoSummary": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "disabled",
+        "1": "enabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      2
+    ]
+  },
+  "snBgp4GenDefaultLocalPreference": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      3
+    ]
+  },
+  "snBgp4GenDefaultInfoOriginate": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "disabled",
+        "1": "enabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      4
+    ]
+  },
+  "snBgp4GenFastExternalFallover": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "disabled",
+        "1": "enabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      5
+    ]
+  },
+  "snBgp4GenNextBootNeighbors": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      6
+    ]
+  },
+  "snBgp4GenNextBootRoutes": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      7
+    ]
+  },
+  "snBgp4GenSynchronization": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "disabled",
+        "1": "enabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      8
+    ]
+  },
+  "snBgp4GenKeepAliveTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      9
+    ]
+  },
+  "snBgp4GenHoldTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      10
+    ]
+  },
+  "snBgp4GenRouterId": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      11
+    ]
+  },
+  "snBgp4GenTableMap": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      12
+    ]
+  },
+  "snBgp4GenAdminStat": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "disabled",
+        "1": "enabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      13
+    ]
+  },
+  "snBgp4GenDefaultMetric": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      14
+    ]
+  },
+  "snBgp4GenMaxNeighbors": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      15
+    ]
+  },
+  "snBgp4GenMinNeighbors": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      16
+    ]
+  },
+  "snBgp4GenMaxRoutes": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      17
+    ]
+  },
+  "snBgp4GenMinRoutes": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      18
+    ]
+  },
+  "snBgp4GenMaxAddrFilters": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      19
+    ]
+  },
+  "snBgp4GenMaxAggregateAddresses": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      20
+    ]
+  },
+  "snBgp4GenMaxAsPathFilters": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      21
+    ]
+  },
+  "snBgp4GenMaxCommunityFilters": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      22
+    ]
+  },
+  "snBgp4GenMaxNetworks": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      23
+    ]
+  },
+  "snBgp4GenMaxRouteMapFilters": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      24
+    ]
+  },
+  "snBgp4GenNeighPrefixMinValue": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      25
+    ]
+  },
+  "snBgp4GenOperNeighbors": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      26
+    ]
+  },
+  "snBgp4GenOperRoutes": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      27
+    ]
+  },
+  "snBgp4GenLocalAs": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      28
+    ]
+  },
+  "snBgp4GenRoutesInstalled": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      29
+    ]
+  },
+  "snBgp4GenAsPathInstalled": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      30
+    ]
+  },
+  "snBgp4ExternalDistance": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      31
+    ]
+  },
+  "snBgp4InternalDistance": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      32
+    ]
+  },
+  "snBgp4LocalDistance": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      33
+    ]
+  },
+  "snBgp4OperNumOfAttributes": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      34
+    ]
+  },
+  "snBgp4NextBootMaxAttributes": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      35
+    ]
+  },
+  "snBgp4ClusterId": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      36
+    ]
+  },
+  "snBgp4ClientToClientReflection": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "disabled",
+        "1": "enabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      37
+    ]
+  },
+  "snBgp4GenTotalNeighbors": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      38
+    ]
+  },
+  "snBgp4GenMaxPaths": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      39
+    ]
+  },
+  "snBgp4GenConfedId": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      40
+    ]
+  },
+  "snBgp4GenConfedPeers": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      41
+    ]
+  },
+  "snBgp4GenDampening": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "none",
+        "1": "parameters",
+        "2": "routeMap"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      42
+    ]
+  },
+  "snBgp4GenDampenHalfLife": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      43
+    ]
+  },
+  "snBgp4GenDampenReuse": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      44
+    ]
+  },
+  "snBgp4GenDampenSuppress": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      45
+    ]
+  },
+  "snBgp4GenDampenMaxSuppress": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      46
+    ]
+  },
+  "snBgp4GenDampenMap": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Gen",
+      47
+    ]
+  },
+  "snBgp4AddrFilterTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SnBgp4AddrFilterEntry"
+    },
+    "index": null,
+    "value": [
+      "snBgp4AddrFilter",
+      1
+    ]
+  },
+  "snBgp4AddrFilterEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnBgp4AddrFilterEntry"
+    },
+    "index": [
+      "snBgp4AddrFilterIndex"
+    ],
+    "value": [
+      "snBgp4AddrFilterTable",
+      1
+    ]
+  },
+  "SnBgp4AddrFilterEntry": {
+    "tp": "SEQUENCE"
+  },
+  "snBgp4AddrFilterIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4AddrFilterEntry",
+      1
+    ]
+  },
+  "snBgp4AddrFilterAction": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "deny",
+        "1": "permit"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4AddrFilterEntry",
+      2
+    ]
+  },
+  "snBgp4AddrFilterSourceIp": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4AddrFilterEntry",
+      3
+    ]
+  },
+  "snBgp4AddrFilterSourceMask": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4AddrFilterEntry",
+      4
+    ]
+  },
+  "snBgp4AddrFilterDestIp": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4AddrFilterEntry",
+      5
+    ]
+  },
+  "snBgp4AddrFilterDestMask": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4AddrFilterEntry",
+      6
+    ]
+  },
+  "snBgp4AddrFilterRowStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "invalid",
+        "2": "valid",
+        "3": "delete",
+        "4": "create",
+        "5": "modify"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4AddrFilterEntry",
+      7
+    ]
+  },
+  "snBgp4AggregateAddrTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SnBgp4AggregateAddrEntry"
+    },
+    "index": null,
+    "value": [
+      "snBgp4AggregateAddr",
+      1
+    ]
+  },
+  "snBgp4AggregateAddrEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnBgp4AggregateAddrEntry"
+    },
+    "index": [
+      "snBgp4AggregateAddrIp",
+      "snBgp4AggregateAddrMask",
+      "snBgp4AggregateAddrOption"
+    ],
+    "value": [
+      "snBgp4AggregateAddrTable",
+      1
+    ]
+  },
+  "SnBgp4AggregateAddrEntry": {
+    "tp": "SEQUENCE"
+  },
+  "snBgp4AggregateAddrIp": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4AggregateAddrEntry",
+      1
+    ]
+  },
+  "snBgp4AggregateAddrMask": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4AggregateAddrEntry",
+      2
+    ]
+  },
+  "snBgp4AggregateAddrOption": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "address",
+        "2": "asSet",
+        "3": "summaryOnly",
+        "4": "suppressMap",
+        "5": "advertiseMap",
+        "6": "attributeMap"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4AggregateAddrEntry",
+      3
+    ]
+  },
+  "snBgp4AggregateAddrMap": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4AggregateAddrEntry",
+      4
+    ]
+  },
+  "snBgp4AggregateAddrRowStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "invalid",
+        "2": "valid",
+        "3": "delete",
+        "4": "create",
+        "5": "modify"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4AggregateAddrEntry",
+      5
+    ]
+  },
+  "snBgp4AsPathFilterTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SnBgp4AsPathFilterEntry"
+    },
+    "index": null,
+    "value": [
+      "snBgp4AsPathFilter",
+      1
+    ]
+  },
+  "snBgp4AsPathFilterEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnBgp4AsPathFilterEntry"
+    },
+    "index": [
+      "snBgp4AsPathFilterIndex"
+    ],
+    "value": [
+      "snBgp4AsPathFilterTable",
+      1
+    ]
+  },
+  "SnBgp4AsPathFilterEntry": {
+    "tp": "SEQUENCE"
+  },
+  "snBgp4AsPathFilterIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4AsPathFilterEntry",
+      1
+    ]
+  },
+  "snBgp4AsPathFilterAction": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "deny",
+        "1": "permit"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4AsPathFilterEntry",
+      2
+    ]
+  },
+  "snBgp4AsPathFilterRegExpression": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4AsPathFilterEntry",
+      3
+    ]
+  },
+  "snBgp4AsPathFilterRowStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "invalid",
+        "2": "valid",
+        "3": "delete",
+        "4": "create",
+        "5": "modify"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4AsPathFilterEntry",
+      4
+    ]
+  },
+  "snBgp4CommunityFilterTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SnBgp4CommunityFilterEntry"
+    },
+    "index": null,
+    "value": [
+      "snBgp4CommunityFilter",
+      1
+    ]
+  },
+  "snBgp4CommunityFilterEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnBgp4CommunityFilterEntry"
+    },
+    "index": [
+      "snBgp4CommunityFilterIndex"
+    ],
+    "value": [
+      "snBgp4CommunityFilterTable",
+      1
+    ]
+  },
+  "SnBgp4CommunityFilterEntry": {
+    "tp": "SEQUENCE"
+  },
+  "snBgp4CommunityFilterIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4CommunityFilterEntry",
+      1
+    ]
+  },
+  "snBgp4CommunityFilterAction": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "deny",
+        "1": "permit"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4CommunityFilterEntry",
+      2
+    ]
+  },
+  "snBgp4CommunityFilterCommNum": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4CommunityFilterEntry",
+      3
+    ]
+  },
+  "snBgp4CommunityFilterInternet": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "disabled",
+        "1": "enabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4CommunityFilterEntry",
+      4
+    ]
+  },
+  "snBgp4CommunityFilterNoAdvertise": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "false",
+        "1": "true"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4CommunityFilterEntry",
+      5
+    ]
+  },
+  "snBgp4CommunityFilterNoExport": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "false",
+        "1": "true"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4CommunityFilterEntry",
+      6
+    ]
+  },
+  "snBgp4CommunityFilterRowStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "invalid",
+        "2": "valid",
+        "3": "delete",
+        "4": "create",
+        "5": "modify"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4CommunityFilterEntry",
+      7
+    ]
+  },
+  "snBgp4CommunityFilterLocalAs": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "false",
+        "1": "true"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4CommunityFilterEntry",
+      8
+    ]
+  },
+  "snBgp4NeighGenCfgTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SnBgp4NeighGenCfgEntry"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighGenCfg",
+      1
+    ]
+  },
+  "snBgp4NeighGenCfgEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnBgp4NeighGenCfgEntry"
+    },
+    "index": [
+      "snBgp4NeighGenCfgNeighIp"
+    ],
+    "value": [
+      "snBgp4NeighGenCfgTable",
+      1
+    ]
+  },
+  "SnBgp4NeighGenCfgEntry": {
+    "tp": "SEQUENCE"
+  },
+  "snBgp4NeighGenCfgNeighIp": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighGenCfgEntry",
+      1
+    ]
+  },
+  "snBgp4NeighGenCfgAdvertlevel": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighGenCfgEntry",
+      2
+    ]
+  },
+  "snBgp4NeighGenCfgDefOriginate": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "disabled",
+        "1": "enabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighGenCfgEntry",
+      3
+    ]
+  },
+  "snBgp4NeighGenCfgEbgpMultihop": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "disabled",
+        "1": "enabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighGenCfgEntry",
+      4
+    ]
+  },
+  "snBgp4NeighGenCfgMaxPrefix": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighGenCfgEntry",
+      5
+    ]
+  },
+  "snBgp4NeighGenCfgNextHopSelf": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "disabled",
+        "1": "enabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighGenCfgEntry",
+      6
+    ]
+  },
+  "snBgp4NeighGenCfgRemoteAs": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighGenCfgEntry",
+      7
+    ]
+  },
+  "snBgp4NeighGenCfgSendComm": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "disabled",
+        "1": "enabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighGenCfgEntry",
+      8
+    ]
+  },
+  "snBgp4NeighGenCfgWeight": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighGenCfgEntry",
+      9
+    ]
+  },
+  "snBgp4NeighGenCfgWeightFilterList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighGenCfgEntry",
+      10
+    ]
+  },
+  "snBgp4NeighGenCfgRowStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "invalid",
+        "2": "valid",
+        "3": "delete",
+        "4": "create",
+        "5": "modify",
+        "6": "applyDefault"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighGenCfgEntry",
+      11
+    ]
+  },
+  "snBgp4NeighGenCfgUpdateSrcLpbIntf": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighGenCfgEntry",
+      12
+    ]
+  },
+  "snBgp4NeighGenCfgRouteRefClient": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "disabled",
+        "1": "enabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighGenCfgEntry",
+      13
+    ]
+  },
+  "snBgp4NeighGenCfgRemovePrivateAs": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "disabled",
+        "1": "enabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighGenCfgEntry",
+      14
+    ]
+  },
+  "snBgp4NeighGenCfgEbgpMultihopTtl": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighGenCfgEntry",
+      15
+    ]
+  },
+  "snBgp4NeighGenCfgShutdown": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "disabled",
+        "1": "enabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighGenCfgEntry",
+      16
+    ]
+  },
+  "snBgp4NeighGenCfgKeepAliveTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighGenCfgEntry",
+      17
+    ]
+  },
+  "snBgp4NeighGenCfgHoldTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighGenCfgEntry",
+      18
+    ]
+  },
+  "snBgp4NeighGenCfgDefOrigMap": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighGenCfgEntry",
+      19
+    ]
+  },
+  "snBgp4NeighGenCfgDesc": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighGenCfgEntry",
+      20
+    ]
+  },
+  "snBgp4NeighGenCfgPass": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighGenCfgEntry",
+      21
+    ]
+  },
+  "snBgp4NeighDistGroupTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SnBgp4NeighDistGroupEntry"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighDistGroup",
+      1
+    ]
+  },
+  "snBgp4NeighDistGroupEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnBgp4NeighDistGroupEntry"
+    },
+    "index": [
+      "snBgp4NeighDistGroupNeighIp",
+      "snBgp4NeighDistGroupDir"
+    ],
+    "value": [
+      "snBgp4NeighDistGroupTable",
+      1
+    ]
+  },
+  "SnBgp4NeighDistGroupEntry": {
+    "tp": "SEQUENCE"
+  },
+  "snBgp4NeighDistGroupNeighIp": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighDistGroupEntry",
+      1
+    ]
+  },
+  "snBgp4NeighDistGroupDir": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "out",
+        "1": "in"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighDistGroupEntry",
+      2
+    ]
+  },
+  "snBgp4NeighDistGroupAccessList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighDistGroupEntry",
+      3
+    ]
+  },
+  "snBgp4NeighDistGroupRowStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "invalid",
+        "2": "valid",
+        "3": "delete",
+        "4": "create",
+        "5": "modify"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighDistGroupEntry",
+      4
+    ]
+  },
+  "snBgp4NeighDistGroupInFilterList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighDistGroupEntry",
+      5
+    ]
+  },
+  "snBgp4NeighDistGroupOutFilterList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighDistGroupEntry",
+      6
+    ]
+  },
+  "snBgp4NeighDistGroupInIpAccessList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighDistGroupEntry",
+      7
+    ]
+  },
+  "snBgp4NeighDistGroupOutIpAccessList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighDistGroupEntry",
+      8
+    ]
+  },
+  "snBgp4NeighDistGroupInPrefixList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighDistGroupEntry",
+      9
+    ]
+  },
+  "snBgp4NeighDistGroupOutPrefixList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighDistGroupEntry",
+      10
+    ]
+  },
+  "snBgp4NeighFilterGroupTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SnBgp4NeighFilterGroupEntry"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighFilterGroup",
+      1
+    ]
+  },
+  "snBgp4NeighFilterGroupEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnBgp4NeighFilterGroupEntry"
+    },
+    "index": [
+      "snBgp4NeighFilterGroupNeighIp",
+      "snBgp4NeighFilterGroupDir"
+    ],
+    "value": [
+      "snBgp4NeighFilterGroupTable",
+      1
+    ]
+  },
+  "SnBgp4NeighFilterGroupEntry": {
+    "tp": "SEQUENCE"
+  },
+  "snBgp4NeighFilterGroupNeighIp": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighFilterGroupEntry",
+      1
+    ]
+  },
+  "snBgp4NeighFilterGroupDir": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "out",
+        "1": "in"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighFilterGroupEntry",
+      2
+    ]
+  },
+  "snBgp4NeighFilterGroupAccessList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighFilterGroupEntry",
+      3
+    ]
+  },
+  "snBgp4NeighFilterGroupRowStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "invalid",
+        "2": "valid",
+        "3": "delete",
+        "4": "create",
+        "5": "modify"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighFilterGroupEntry",
+      4
+    ]
+  },
+  "snBgp4NeighFilterGroupInFilterList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighFilterGroupEntry",
+      5
+    ]
+  },
+  "snBgp4NeighFilterGroupOutFilterList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighFilterGroupEntry",
+      6
+    ]
+  },
+  "snBgp4NeighFilterGroupInAsPathAccessList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighFilterGroupEntry",
+      7
+    ]
+  },
+  "snBgp4NeighFilterGroupOutAsPathAccessList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighFilterGroupEntry",
+      8
+    ]
+  },
+  "snBgp4NeighFilterGroupWeight": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighFilterGroupEntry",
+      9
+    ]
+  },
+  "snBgp4NeighFilterGroupWeightAccessList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighFilterGroupEntry",
+      10
+    ]
+  },
+  "snBgp4NeighRouteMapTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SnBgp4NeighRouteMapEntry"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighRouteMap",
+      1
+    ]
+  },
+  "snBgp4NeighRouteMapEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnBgp4NeighRouteMapEntry"
+    },
+    "index": [
+      "snBgp4NeighRouteMapNeighIp",
+      "snBgp4NeighRouteMapDir"
+    ],
+    "value": [
+      "snBgp4NeighRouteMapTable",
+      1
+    ]
+  },
+  "SnBgp4NeighRouteMapEntry": {
+    "tp": "SEQUENCE"
+  },
+  "snBgp4NeighRouteMapNeighIp": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighRouteMapEntry",
+      1
+    ]
+  },
+  "snBgp4NeighRouteMapDir": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "out",
+        "1": "in"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighRouteMapEntry",
+      2
+    ]
+  },
+  "snBgp4NeighRouteMapMapName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighRouteMapEntry",
+      3
+    ]
+  },
+  "snBgp4NeighRouteMapRowStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "invalid",
+        "2": "valid",
+        "3": "delete",
+        "4": "create",
+        "5": "modify"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighRouteMapEntry",
+      4
+    ]
+  },
+  "snBgp4NetworkTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SnBgp4NetworkEntry"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Network",
+      1
+    ]
+  },
+  "snBgp4NetworkEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnBgp4NetworkEntry"
+    },
+    "index": [
+      "snBgp4NetworkIp",
+      "snBgp4NetworkSubnetMask"
+    ],
+    "value": [
+      "snBgp4NetworkTable",
+      1
+    ]
+  },
+  "SnBgp4NetworkEntry": {
+    "tp": "SEQUENCE"
+  },
+  "snBgp4NetworkIp": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NetworkEntry",
+      1
+    ]
+  },
+  "snBgp4NetworkSubnetMask": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NetworkEntry",
+      2
+    ]
+  },
+  "snBgp4NetworkWeight": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NetworkEntry",
+      3
+    ]
+  },
+  "snBgp4NetworkBackdoor": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "disabled",
+        "1": "enabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4NetworkEntry",
+      4
+    ]
+  },
+  "snBgp4NetworkRowStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "invalid",
+        "2": "valid",
+        "3": "delete",
+        "4": "create",
+        "5": "modify"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4NetworkEntry",
+      5
+    ]
+  },
+  "snBgp4RedisTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SnBgp4RedisEntry"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Redis",
+      1
+    ]
+  },
+  "snBgp4RedisEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnBgp4RedisEntry"
+    },
+    "index": [
+      "snBgp4RedisProtocol"
+    ],
+    "value": [
+      "snBgp4RedisTable",
+      1
+    ]
+  },
+  "SnBgp4RedisEntry": {
+    "tp": "SEQUENCE"
+  },
+  "snBgp4RedisProtocol": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "rip",
+        "2": "ospf",
+        "3": "static",
+        "4": "connected",
+        "5": "isis"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4RedisEntry",
+      1
+    ]
+  },
+  "snBgp4RedisMetric": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RedisEntry",
+      2
+    ]
+  },
+  "snBgp4RedisRouteMap": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RedisEntry",
+      3
+    ]
+  },
+  "snBgp4RedisWeight": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RedisEntry",
+      4
+    ]
+  },
+  "snBgp4RedisMatchInternal": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "disabled",
+        "1": "enabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4RedisEntry",
+      5
+    ]
+  },
+  "snBgp4RedisMatchExternal1": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "disabled",
+        "1": "enabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4RedisEntry",
+      6
+    ]
+  },
+  "snBgp4RedisMatchExternal2": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "disabled",
+        "1": "enabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4RedisEntry",
+      7
+    ]
+  },
+  "snBgp4RedisRowStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "invalid",
+        "2": "valid",
+        "3": "delete",
+        "4": "create",
+        "5": "modify"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4RedisEntry",
+      8
+    ]
+  },
+  "snBgp4RouteMapFilterTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SnBgp4RouteMapFilterEntry"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapFilter",
+      1
+    ]
+  },
+  "snBgp4RouteMapFilterEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnBgp4RouteMapFilterEntry"
+    },
+    "index": [
+      "snBgp4RouteMapFilterMapName",
+      "snBgp4RouteMapFilterSequenceNum"
+    ],
+    "value": [
+      "snBgp4RouteMapFilterTable",
+      1
+    ]
+  },
+  "SnBgp4RouteMapFilterEntry": {
+    "tp": "SEQUENCE"
+  },
+  "snBgp4RouteMapFilterMapName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapFilterEntry",
+      1
+    ]
+  },
+  "snBgp4RouteMapFilterSequenceNum": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapFilterEntry",
+      2
+    ]
+  },
+  "snBgp4RouteMapFilterAction": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "deny",
+        "1": "permit"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapFilterEntry",
+      3
+    ]
+  },
+  "snBgp4RouteMapFilterRowStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "invalid",
+        "2": "valid",
+        "3": "delete",
+        "4": "create",
+        "5": "modify"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapFilterEntry",
+      4
+    ]
+  },
+  "snBgp4RouteMapMatchTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SnBgp4RouteMapMatchEntry"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapMatch",
+      1
+    ]
+  },
+  "snBgp4RouteMapMatchEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnBgp4RouteMapMatchEntry"
+    },
+    "index": [
+      "snBgp4RouteMapMatchMapName",
+      "snBgp4RouteMapMatchSequenceNum"
+    ],
+    "value": [
+      "snBgp4RouteMapMatchTable",
+      1
+    ]
+  },
+  "SnBgp4RouteMapMatchEntry": {
+    "tp": "SEQUENCE"
+  },
+  "snBgp4RouteMapMatchMapName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapMatchEntry",
+      1
+    ]
+  },
+  "snBgp4RouteMapMatchSequenceNum": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapMatchEntry",
+      2
+    ]
+  },
+  "snBgp4RouteMapMatchAsPathFilter": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapMatchEntry",
+      3
+    ]
+  },
+  "snBgp4RouteMapMatchCommunityFilter": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapMatchEntry",
+      4
+    ]
+  },
+  "snBgp4RouteMapMatchAddressFilter": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapMatchEntry",
+      5
+    ]
+  },
+  "snBgp4RouteMapMatchMetric": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapMatchEntry",
+      6
+    ]
+  },
+  "snBgp4RouteMapMatchNextHopList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapMatchEntry",
+      7
+    ]
+  },
+  "snBgp4RouteMapMatchRouteType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "none",
+        "1": "external",
+        "2": "externalType1",
+        "3": "externalType2",
+        "4": "internal",
+        "5": "local"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapMatchEntry",
+      8
+    ]
+  },
+  "snBgp4RouteMapMatchTagList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapMatchEntry",
+      9
+    ]
+  },
+  "snBgp4RouteMapMatchRowMask": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapMatchEntry",
+      10
+    ]
+  },
+  "snBgp4RouteMapMatchAsPathAccessList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapMatchEntry",
+      11
+    ]
+  },
+  "snBgp4RouteMapMatchCommunityList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapMatchEntry",
+      12
+    ]
+  },
+  "snBgp4RouteMapMatchAddressAccessList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapMatchEntry",
+      13
+    ]
+  },
+  "snBgp4RouteMapMatchAddressPrefixList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapMatchEntry",
+      14
+    ]
+  },
+  "snBgp4RouteMapMatchNextHopAccessList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapMatchEntry",
+      15
+    ]
+  },
+  "snBgp4RouteMapMatchNextHopPrefixList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapMatchEntry",
+      16
+    ]
+  },
+  "snBgp4RouteMapSetTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SnBgp4RouteMapSetEntry"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapSet",
+      1
+    ]
+  },
+  "snBgp4RouteMapSetEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnBgp4RouteMapSetEntry"
+    },
+    "index": [
+      "snBgp4RouteMapSetMapName",
+      "snBgp4RouteMapSetSequenceNum"
+    ],
+    "value": [
+      "snBgp4RouteMapSetTable",
+      1
+    ]
+  },
+  "SnBgp4RouteMapSetEntry": {
+    "tp": "SEQUENCE"
+  },
+  "snBgp4RouteMapSetMapName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapSetEntry",
+      1
+    ]
+  },
+  "snBgp4RouteMapSetSequenceNum": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapSetEntry",
+      2
+    ]
+  },
+  "snBgp4RouteMapSetAsPathType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "tag",
+        "1": "prepend"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapSetEntry",
+      3
+    ]
+  },
+  "snBgp4RouteMapSetAsPathString": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapSetEntry",
+      4
+    ]
+  },
+  "snBgp4RouteMapSetAutoTag": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "disabled",
+        "1": "enabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapSetEntry",
+      5
+    ]
+  },
+  "snBgp4RouteMapSetCommunityType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "nums",
+        "3": "none"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapSetEntry",
+      6
+    ]
+  },
+  "snBgp4RouteMapSetCommunityNum": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapSetEntry",
+      7
+    ]
+  },
+  "snBgp4RouteMapSetCommunityAdditive": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "disabled",
+        "1": "enabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapSetEntry",
+      8
+    ]
+  },
+  "snBgp4RouteMapSetLocalPreference": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapSetEntry",
+      9
+    ]
+  },
+  "snBgp4RouteMapSetMetric": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapSetEntry",
+      10
+    ]
+  },
+  "snBgp4RouteMapSetNextHop": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapSetEntry",
+      11
+    ]
+  },
+  "snBgp4RouteMapSetOrigin": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "igp",
+        "1": "egp",
+        "2": "incomplete"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapSetEntry",
+      12
+    ]
+  },
+  "snBgp4RouteMapSetTag": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapSetEntry",
+      13
+    ]
+  },
+  "snBgp4RouteMapSetWeight": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapSetEntry",
+      14
+    ]
+  },
+  "snBgp4RouteMapSetRowMask": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapSetEntry",
+      15
+    ]
+  },
+  "snBgp4RouteMapSetCommunityNums": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapSetEntry",
+      16
+    ]
+  },
+  "snBgp4RouteMapSetDampenHalfLife": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapSetEntry",
+      17
+    ]
+  },
+  "snBgp4RouteMapSetDampenReuse": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapSetEntry",
+      18
+    ]
+  },
+  "snBgp4RouteMapSetDampenSuppress": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapSetEntry",
+      19
+    ]
+  },
+  "snBgp4RouteMapSetDampenMaxSuppress": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteMapSetEntry",
+      20
+    ]
+  },
+  "snBgp4NeighOperStatusTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SnBgp4NeighOperStatusEntry"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighOperStatus",
+      1
+    ]
+  },
+  "snBgp4NeighOperStatusEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnBgp4NeighOperStatusEntry"
+    },
+    "index": [
+      "snBgp4NeighOperStatusIndex"
+    ],
+    "value": [
+      "snBgp4NeighOperStatusTable",
+      1
+    ]
+  },
+  "SnBgp4NeighOperStatusEntry": {
+    "tp": "SEQUENCE"
+  },
+  "snBgp4NeighOperStatusIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighOperStatusEntry",
+      1
+    ]
+  },
+  "snBgp4NeighOperStatusIp": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighOperStatusEntry",
+      2
+    ]
+  },
+  "snBgp4NeighOperStatusRemoteAs": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighOperStatusEntry",
+      3
+    ]
+  },
+  "snBgp4NeighOperStatusBgpType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "ebgp",
+        "1": "ibgp"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighOperStatusEntry",
+      4
+    ]
+  },
+  "snBgp4NeighOperStatusState": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "noState",
+        "1": "idle",
+        "2": "connect",
+        "3": "active",
+        "4": "openSent",
+        "5": "openConfirm",
+        "6": "established"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighOperStatusEntry",
+      5
+    ]
+  },
+  "snBgp4NeighOperStatusKeepAliveTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighOperStatusEntry",
+      6
+    ]
+  },
+  "snBgp4NeighOperStatusHoldTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighOperStatusEntry",
+      7
+    ]
+  },
+  "snBgp4NeighOperStatusAdvertlevel": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighOperStatusEntry",
+      8
+    ]
+  },
+  "snBgp4NeighOperStatusKeepAliveTxCounts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighOperStatusEntry",
+      9
+    ]
+  },
+  "snBgp4NeighOperStatusKeepAliveRxCounts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighOperStatusEntry",
+      10
+    ]
+  },
+  "snBgp4NeighOperStatusUpdateTxCounts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighOperStatusEntry",
+      11
+    ]
+  },
+  "snBgp4NeighOperStatusUpdateRxCounts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighOperStatusEntry",
+      12
+    ]
+  },
+  "snBgp4NeighOperStatusNotifTxCounts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighOperStatusEntry",
+      13
+    ]
+  },
+  "snBgp4NeighOperStatusNotifRxCounts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighOperStatusEntry",
+      14
+    ]
+  },
+  "snBgp4NeighOperStatusOpenTxCounts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighOperStatusEntry",
+      15
+    ]
+  },
+  "snBgp4NeighOperStatusOpenRxCounts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighOperStatusEntry",
+      16
+    ]
+  },
+  "snBgp4RouteOperStatusTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SnBgp4RouteOperStatusEntry"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteOperStatus",
+      1
+    ]
+  },
+  "snBgp4RouteOperStatusEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnBgp4RouteOperStatusEntry"
+    },
+    "index": [
+      "snBgp4RouteOperStatusIndex"
+    ],
+    "value": [
+      "snBgp4RouteOperStatusTable",
+      1
+    ]
+  },
+  "SnBgp4RouteOperStatusEntry": {
+    "tp": "SEQUENCE"
+  },
+  "snBgp4RouteOperStatusIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteOperStatusEntry",
+      1
+    ]
+  },
+  "snBgp4RouteOperStatusIp": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteOperStatusEntry",
+      2
+    ]
+  },
+  "snBgp4RouteOperStatusSubnetMask": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteOperStatusEntry",
+      3
+    ]
+  },
+  "snBgp4RouteOperStatusNextHop": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteOperStatusEntry",
+      4
+    ]
+  },
+  "snBgp4RouteOperStatusMetric": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteOperStatusEntry",
+      5
+    ]
+  },
+  "snBgp4RouteOperStatusLocalPreference": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteOperStatusEntry",
+      6
+    ]
+  },
+  "snBgp4RouteOperStatusWeight": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteOperStatusEntry",
+      7
+    ]
+  },
+  "snBgp4RouteOperStatusOrigin": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "igp",
+        "1": "egp",
+        "2": "incomplete"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteOperStatusEntry",
+      8
+    ]
+  },
+  "snBgp4RouteOperStatusStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteOperStatusEntry",
+      9
+    ]
+  },
+  "snBgp4RouteOperStatusRouteTag": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteOperStatusEntry",
+      10
+    ]
+  },
+  "snBgp4RouteOperStatusCommunityList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteOperStatusEntry",
+      11
+    ]
+  },
+  "snBgp4RouteOperStatusAsPathList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4RouteOperStatusEntry",
+      12
+    ]
+  },
+  "snBgp4NeighborSummaryTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SnBgp4NeighborSummaryEntry"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighborSummary",
+      1
+    ]
+  },
+  "snBgp4NeighborSummaryEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnBgp4NeighborSummaryEntry"
+    },
+    "index": [
+      "snBgp4NeighborSummaryIndex"
+    ],
+    "value": [
+      "snBgp4NeighborSummaryTable",
+      1
+    ]
+  },
+  "SnBgp4NeighborSummaryEntry": {
+    "tp": "SEQUENCE"
+  },
+  "snBgp4NeighborSummaryIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighborSummaryEntry",
+      1
+    ]
+  },
+  "snBgp4NeighborSummaryIp": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighborSummaryEntry",
+      2
+    ]
+  },
+  "snBgp4NeighborSummaryState": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "noState",
+        "1": "idle",
+        "2": "connect",
+        "3": "active",
+        "4": "openSent",
+        "5": "openConfirm",
+        "6": "established"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighborSummaryEntry",
+      3
+    ]
+  },
+  "snBgp4NeighborSummaryStateChgTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighborSummaryEntry",
+      4
+    ]
+  },
+  "snBgp4NeighborSummaryRouteReceived": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighborSummaryEntry",
+      5
+    ]
+  },
+  "snBgp4NeighborSummaryRouteInstalled": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighborSummaryEntry",
+      6
+    ]
+  },
+  "snBgp4AttributeTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SnBgp4AttributeEntry"
+    },
+    "index": null,
+    "value": [
+      "snBgp4Attribute",
+      1
+    ]
+  },
+  "snBgp4AttributeEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnBgp4AttributeEntry"
+    },
+    "index": [
+      "snBgp4AttributeIndex"
+    ],
+    "value": [
+      "snBgp4AttributeTable",
+      1
+    ]
+  },
+  "SnBgp4AttributeEntry": {
+    "tp": "SEQUENCE"
+  },
+  "snBgp4AttributeIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4AttributeEntry",
+      1
+    ]
+  },
+  "snBgp4AttributeNextHop": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4AttributeEntry",
+      2
+    ]
+  },
+  "snBgp4AttributeMetric": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4AttributeEntry",
+      3
+    ]
+  },
+  "snBgp4AttributeOrigin": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "igp",
+        "1": "egp",
+        "2": "incomplete"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4AttributeEntry",
+      4
+    ]
+  },
+  "snBgp4AttributeAggregatorAs": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4AttributeEntry",
+      5
+    ]
+  },
+  "snBgp4AttributeRouterId": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4AttributeEntry",
+      6
+    ]
+  },
+  "snBgp4AttributeAtomicAggregatePresent": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "false",
+        "1": "true"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4AttributeEntry",
+      7
+    ]
+  },
+  "snBgp4AttributeLocalPreference": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "snBgp4AttributeEntry",
+      8
+    ]
+  },
+  "snBgp4AttributeCommunityList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4AttributeEntry",
+      9
+    ]
+  },
+  "snBgp4AttributeAsPathList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4AttributeEntry",
+      10
+    ]
+  },
+  "snBgp4AttributeOriginator": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4AttributeEntry",
+      11
+    ]
+  },
+  "snBgp4AttributeClusterList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4AttributeEntry",
+      12
+    ]
+  },
+  "snBgp4ClearNeighborCmdTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SnBgp4ClearNeighborCmdEntry"
+    },
+    "index": null,
+    "value": [
+      "snBgp4ClearNeighborCmd",
+      1
+    ]
+  },
+  "snBgp4ClearNeighborCmdEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnBgp4ClearNeighborCmdEntry"
+    },
+    "index": [
+      "snBgp4ClearNeighborCmdIp"
+    ],
+    "value": [
+      "snBgp4ClearNeighborCmdTable",
+      1
+    ]
+  },
+  "SnBgp4ClearNeighborCmdEntry": {
+    "tp": "SEQUENCE"
+  },
+  "snBgp4ClearNeighborCmdIp": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4ClearNeighborCmdEntry",
+      1
+    ]
+  },
+  "snBgp4ClearNeighborCmdElement": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "valid",
+        "1": "lastPacketWithError",
+        "2": "notificationErrors",
+        "3": "softOutbound",
+        "4": "traffic",
+        "5": "neighbor"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4ClearNeighborCmdEntry",
+      2
+    ]
+  },
+  "snBgp4NeighPrefixGroupTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SnBgp4NeighPrefixGroupEntry"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighPrefixGroup",
+      1
+    ]
+  },
+  "snBgp4NeighPrefixGroupEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnBgp4NeighPrefixGroupEntry"
+    },
+    "index": [
+      "snBgp4NeighPrefixGroupNeighIp",
+      "snBgp4NeighPrefixGroupDir"
+    ],
+    "value": [
+      "snBgp4NeighPrefixGroupTable",
+      1
+    ]
+  },
+  "SnBgp4NeighPrefixGroupEntry": {
+    "tp": "SEQUENCE"
+  },
+  "snBgp4NeighPrefixGroupNeighIp": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighPrefixGroupEntry",
+      1
+    ]
+  },
+  "snBgp4NeighPrefixGroupDir": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "0": "out",
+        "1": "in"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighPrefixGroupEntry",
+      2
+    ]
+  },
+  "snBgp4NeighPrefixGroupInAccessList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighPrefixGroupEntry",
+      3
+    ]
+  },
+  "snBgp4NeighPrefixGroupOutAccessList": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighPrefixGroupEntry",
+      4
+    ]
+  },
+  "snBgp4NeighPrefixGroupRowStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "invalid",
+        "2": "valid",
+        "3": "delete",
+        "4": "create",
+        "5": "modify"
+      }
+    },
+    "index": null,
+    "value": [
+      "snBgp4NeighPrefixGroupEntry",
+      5
+    ]
+  }
+}

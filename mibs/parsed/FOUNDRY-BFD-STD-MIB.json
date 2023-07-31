@@ -1,0 +1,639 @@
+{
+  "IMPORTS": [
+    [
+      "SNMPv2-SMI",
+      [
+        "MODULE-IDENTITY",
+        "OBJECT-TYPE",
+        "Unsigned32",
+        "Counter32",
+        "Counter64",
+        "NOTIFICATION-TYPE"
+      ]
+    ],
+    [
+      "SNMPv2-TC",
+      [
+        "TEXTUAL-CONVENTION",
+        "TruthValue",
+        "RowStatus",
+        "StorageType",
+        "TimeStamp"
+      ]
+    ],
+    [
+      "SNMPv2-CONF",
+      [
+        "MODULE-COMPLIANCE",
+        "OBJECT-GROUP",
+        "NOTIFICATION-GROUP"
+      ]
+    ],
+    [
+      "INET-ADDRESS-MIB",
+      [
+        "InetAddress",
+        "InetAddressType",
+        "InetPortNumber"
+      ]
+    ],
+    [
+      "FOUNDRY-SN-ROOT-MIB",
+      [
+        "bfd"
+      ]
+    ]
+  ],
+  "bfdMIB": {
+    "tp": "MODULE-IDENTITY",
+    "value": [
+      "bfd",
+      1
+    ]
+  },
+  "bfdNotifications": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "bfdMIB",
+      0
+    ]
+  },
+  "bfdObjects": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "bfdMIB",
+      1
+    ]
+  },
+  "bfdConformance": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "bfdMIB",
+      3
+    ]
+  },
+  "bfdScalarObjects": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "bfdObjects",
+      1
+    ]
+  },
+  "BfdSessIndexTC": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "display_hint": "d"
+  },
+  "BfdInterval": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "display_hint": null
+  },
+  "BfdDiag": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "noDiagnostic",
+        "2": "controlDetectionTimeExpired",
+        "3": "echoFunctionFailed",
+        "4": "neighborSignaledSessionDown",
+        "5": "forwardingPlaneReset",
+        "6": "pathDown",
+        "7": "concatenatedPathDown",
+        "8": "administrativelyDown",
+        "9": "reverseConcatenatedPathDown"
+      }
+    },
+    "display_hint": null
+  },
+  "bfdAdminStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "bfdScalarObjects",
+      1
+    ]
+  },
+  "bfdVersionNumber": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "index": null,
+    "value": [
+      "bfdScalarObjects",
+      3
+    ]
+  },
+  "bfdSessTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF BfdSessEntry"
+    },
+    "index": null,
+    "value": [
+      "bfdObjects",
+      2
+    ]
+  },
+  "bfdSessEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BfdSessEntry"
+    },
+    "index": [
+      "bfdSessIndex"
+    ],
+    "value": [
+      "bfdSessTable",
+      1
+    ]
+  },
+  "BfdSessEntry": {
+    "tp": "SEQUENCE"
+  },
+  "bfdSessIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BfdSessIndexTC"
+    },
+    "index": null,
+    "value": [
+      "bfdSessEntry",
+      1
+    ]
+  },
+  "bfdSessApplicationId": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "index": null,
+    "value": [
+      "bfdSessEntry",
+      2
+    ]
+  },
+  "bfdSessDiscriminator": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "index": null,
+    "value": [
+      "bfdSessEntry",
+      3
+    ]
+  },
+  "bfdSessRemoteDiscr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "index": null,
+    "value": [
+      "bfdSessEntry",
+      4
+    ]
+  },
+  "bfdSessUdpPort": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "InetPortNumber"
+    },
+    "index": null,
+    "value": [
+      "bfdSessEntry",
+      5
+    ]
+  },
+  "bfdSessState": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "adminDown",
+        "2": "down",
+        "3": "init",
+        "4": "up"
+      }
+    },
+    "index": null,
+    "value": [
+      "bfdSessEntry",
+      6
+    ]
+  },
+  "bfdSessRemoteHeardFlag": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "bfdSessEntry",
+      7
+    ]
+  },
+  "bfdSessDiag": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "index": null,
+    "value": [
+      "bfdSessEntry",
+      8
+    ]
+  },
+  "bfdSessOperMode": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "asyncModeWEchoFun",
+        "2": "asynchModeWOEchoFun",
+        "3": "demandModeWEchoFunction",
+        "4": "demandModeWOEchoFunction"
+      }
+    },
+    "index": null,
+    "value": [
+      "bfdSessEntry",
+      9
+    ]
+  },
+  "bfdSessDemandModeDesiredFlag": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "bfdSessEntry",
+      10
+    ]
+  },
+  "bfdSessEchoFuncModeDesiredFlag": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "bfdSessEntry",
+      11
+    ]
+  },
+  "bfdSessControlPlanIndepFlag": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "bfdSessEntry",
+      12
+    ]
+  },
+  "bfdSessAddrType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "InetAddressType"
+    },
+    "index": null,
+    "value": [
+      "bfdSessEntry",
+      13
+    ]
+  },
+  "bfdSessAddr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "InetAddress"
+    },
+    "index": null,
+    "value": [
+      "bfdSessEntry",
+      14
+    ]
+  },
+  "bfdSessDesiredMinTxInterval": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BfdInterval"
+    },
+    "index": null,
+    "value": [
+      "bfdSessEntry",
+      15
+    ]
+  },
+  "bfdSessReqMinRxInterval": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BfdInterval"
+    },
+    "index": null,
+    "value": [
+      "bfdSessEntry",
+      16
+    ]
+  },
+  "bfdSessReqMinEchoRxInterval": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BfdInterval"
+    },
+    "index": null,
+    "value": [
+      "bfdSessEntry",
+      17
+    ]
+  },
+  "bfdSessDetectMult": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "index": null,
+    "value": [
+      "bfdSessEntry",
+      18
+    ]
+  },
+  "bfdSessStorType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "StorageType"
+    },
+    "index": null,
+    "value": [
+      "bfdSessEntry",
+      19
+    ]
+  },
+  "bfdSessRowStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "RowStatus"
+    },
+    "index": null,
+    "value": [
+      "bfdSessEntry",
+      20
+    ]
+  },
+  "bfdSessAuthPresFlag": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "bfdSessEntry",
+      21
+    ]
+  },
+  "bfdSessAuthenticationType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "simplePassword",
+        "2": "keyedMD5",
+        "3": "meticulousKeyedMD5",
+        "4": "keyedSHA1",
+        "5": "meticulousKeyedSHA1"
+      }
+    },
+    "index": null,
+    "value": [
+      "bfdSessEntry",
+      22
+    ]
+  },
+  "bfdSessPerfTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF BfdSessPerfEntry"
+    },
+    "index": null,
+    "value": [
+      "bfdObjects",
+      3
+    ]
+  },
+  "bfdSessPerfEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BfdSessPerfEntry"
+    },
+    "index": "bfdSessEntry",
+    "value": [
+      "bfdSessPerfTable",
+      1
+    ]
+  },
+  "BfdSessPerfEntry": {
+    "tp": "SEQUENCE"
+  },
+  "bfdSessPerfPktIn": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "bfdSessPerfEntry",
+      1
+    ]
+  },
+  "bfdSessPerfPktOut": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "bfdSessPerfEntry",
+      2
+    ]
+  },
+  "bfdSessPerfUpTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TimeStamp"
+    },
+    "index": null,
+    "value": [
+      "bfdSessPerfEntry",
+      3
+    ]
+  },
+  "bfdSessPerfLastSessDownTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TimeStamp"
+    },
+    "index": null,
+    "value": [
+      "bfdSessPerfEntry",
+      4
+    ]
+  },
+  "bfdSessPerfLastCommLostDiag": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BfdDiag"
+    },
+    "index": null,
+    "value": [
+      "bfdSessPerfEntry",
+      5
+    ]
+  },
+  "bfdSessPerfSessUpCount": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "bfdSessPerfEntry",
+      6
+    ]
+  },
+  "bfdSessPerfDiscTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TimeStamp"
+    },
+    "index": null,
+    "value": [
+      "bfdSessPerfEntry",
+      7
+    ]
+  },
+  "bfdSessPerfPktInHC": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter64"
+    },
+    "index": null,
+    "value": [
+      "bfdSessPerfEntry",
+      8
+    ]
+  },
+  "bfdSessPerfPktOutHC": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter64"
+    },
+    "index": null,
+    "value": [
+      "bfdSessPerfEntry",
+      9
+    ]
+  },
+  "bfdSessMapTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF BfdSessMapEntry"
+    },
+    "index": null,
+    "value": [
+      "bfdObjects",
+      4
+    ]
+  },
+  "bfdSessMapEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BfdSessMapEntry"
+    },
+    "index": [
+      "bfdSessApplicationId",
+      "bfdSessDiscriminator",
+      "bfdSessAddrType",
+      "bfdSessAddr"
+    ],
+    "value": [
+      "bfdSessMapTable",
+      1
+    ]
+  },
+  "BfdSessMapEntry": {
+    "tp": "SEQUENCE"
+  },
+  "bfdSessMapBfdIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BfdSessIndexTC"
+    },
+    "index": null,
+    "value": [
+      "bfdSessMapEntry",
+      1
+    ]
+  },
+  "bfdSessNotificationsEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "bfdScalarObjects",
+      4
+    ]
+  },
+  "bfdGroups": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "bfdConformance",
+      1
+    ]
+  },
+  "bfdCompliances": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "bfdConformance",
+      2
+    ]
+  },
+  "bfdSessionGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "bfdGroups",
+      1
+    ]
+  },
+  "bfdSessionPerfGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "bfdGroups",
+      2
+    ]
+  },
+  "bfdSessionPerfHCGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "bfdGroups",
+      3
+    ]
+  }
+}
