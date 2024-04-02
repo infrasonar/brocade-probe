@@ -1,9 +1,7 @@
 [![CI](https://github.com/infrasonar/brocade-probe/workflows/CI/badge.svg)](https://github.com/infrasonar/brocade-probe/actions)
 [![Release Version](https://img.shields.io/github/release/infrasonar/brocade-probe)](https://github.com/infrasonar/brocade-probe/releases)
 
-# InfraSonar Cisco ASA Probe
-
-Documentation: https://docs.infrasonar.com/collectors/probes/brocade/
+# InfraSonar Brocade FC Switch Probe
 
 ## Environment variable
 

@@ -1,0 +1,1565 @@
+{
+  "IMPORTS": [
+    [
+      "SNMPv2-SMI",
+      [
+        "MODULE-IDENTITY",
+        "OBJECT-TYPE",
+        "Unsigned32",
+        "Counter32",
+        "Gauge32",
+        "Integer32",
+        "mib-2"
+      ]
+    ],
+    [
+      "SNMPv2-TC",
+      [
+        "TEXTUAL-CONVENTION",
+        "TruthValue",
+        "TimeStamp"
+      ]
+    ],
+    [
+      "SNMP-FRAMEWORK-MIB",
+      [
+        "SnmpAdminString"
+      ]
+    ],
+    [
+      "SNMPv2-CONF",
+      [
+        "MODULE-COMPLIANCE",
+        "OBJECT-GROUP"
+      ]
+    ]
+  ],
+  "fcFeMIB": {
+    "tp": "MODULE-IDENTITY",
+    "value": [
+      "mib-2",
+      75
+    ]
+  },
+  "fcFeMIBObjects": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "fcFeMIB",
+      1
+    ]
+  },
+  "fcFeConfig": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "fcFeMIBObjects",
+      1
+    ]
+  },
+  "fcFeStatus": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "fcFeMIBObjects",
+      2
+    ]
+  },
+  "fcFeError": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "fcFeMIBObjects",
+      3
+    ]
+  },
+  "fcFeAccounting": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "fcFeMIBObjects",
+      4
+    ]
+  },
+  "fcFeCapabilities": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "fcFeMIBObjects",
+      5
+    ]
+  },
+  "MilliSeconds": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "display_hint": null
+  },
+  "MicroSeconds": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "display_hint": null
+  },
+  "FcNameId": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "display_hint": null
+  },
+  "FcAddressId": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "display_hint": null
+  },
+  "FcRxDataFieldSize": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "display_hint": null
+  },
+  "FcBbCredit": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "display_hint": null
+  },
+  "FcphVersion": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "display_hint": null
+  },
+  "FcStackedConnMode": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "none",
+        "2": "transparent",
+        "3": "lockedDown"
+      }
+    },
+    "display_hint": null
+  },
+  "FcCosCap": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "BITS",
+      "values": {
+        "0": "classF",
+        "1": "class1",
+        "2": "class2",
+        "3": "class3",
+        "4": "class4",
+        "5": "class5",
+        "6": "class6"
+      }
+    },
+    "display_hint": null
+  },
+  "FcFeModuleCapacity": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "display_hint": null
+  },
+  "FcFeFxPortCapacity": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "display_hint": null
+  },
+  "FcFeModuleIndex": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "display_hint": null
+  },
+  "FcFeFxPortIndex": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "display_hint": null
+  },
+  "FcFeNxPortIndex": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "display_hint": null
+  },
+  "FcBbCreditModel": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "regular",
+        "2": "alternate"
+      }
+    },
+    "display_hint": null
+  },
+  "fcFeFabricName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcNameId"
+    },
+    "index": null,
+    "value": [
+      "fcFeConfig",
+      1
+    ]
+  },
+  "fcFeElementName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcNameId"
+    },
+    "index": null,
+    "value": [
+      "fcFeConfig",
+      2
+    ]
+  },
+  "fcFeModuleCapacity": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcFeModuleCapacity"
+    },
+    "index": null,
+    "value": [
+      "fcFeConfig",
+      3
+    ]
+  },
+  "fcFeModuleTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF FcFeModuleEntry"
+    },
+    "index": null,
+    "value": [
+      "fcFeConfig",
+      4
+    ]
+  },
+  "fcFeModuleEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcFeModuleEntry"
+    },
+    "index": [
+      "fcFeModuleIndex"
+    ],
+    "value": [
+      "fcFeModuleTable",
+      1
+    ]
+  },
+  "FcFeModuleEntry": {
+    "tp": "SEQUENCE"
+  },
+  "fcFeModuleIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcFeModuleIndex"
+    },
+    "index": null,
+    "value": [
+      "fcFeModuleEntry",
+      1
+    ]
+  },
+  "fcFeModuleDescr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnmpAdminString"
+    },
+    "index": null,
+    "value": [
+      "fcFeModuleEntry",
+      2
+    ]
+  },
+  "fcFeModuleObjectID": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OBJECT IDENTIFIER"
+    },
+    "index": null,
+    "value": [
+      "fcFeModuleEntry",
+      3
+    ]
+  },
+  "fcFeModuleOperStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "online",
+        "2": "offline",
+        "3": "testing",
+        "4": "faulty"
+      }
+    },
+    "index": null,
+    "value": [
+      "fcFeModuleEntry",
+      4
+    ]
+  },
+  "fcFeModuleLastChange": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TimeStamp"
+    },
+    "index": null,
+    "value": [
+      "fcFeModuleEntry",
+      5
+    ]
+  },
+  "fcFeModuleFxPortCapacity": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcFeFxPortCapacity"
+    },
+    "index": null,
+    "value": [
+      "fcFeModuleEntry",
+      6
+    ]
+  },
+  "fcFeModuleName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcNameId"
+    },
+    "index": null,
+    "value": [
+      "fcFeModuleEntry",
+      7
+    ]
+  },
+  "fcFxPortTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF FcFxPortEntry"
+    },
+    "index": null,
+    "value": [
+      "fcFeConfig",
+      5
+    ]
+  },
+  "fcFxPortEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcFxPortEntry"
+    },
+    "index": [
+      "fcFeModuleIndex",
+      "fcFxPortIndex"
+    ],
+    "value": [
+      "fcFxPortTable",
+      1
+    ]
+  },
+  "FcFxPortEntry": {
+    "tp": "SEQUENCE"
+  },
+  "fcFxPortIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcFeFxPortIndex"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortEntry",
+      1
+    ]
+  },
+  "fcFxPortName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcNameId"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortEntry",
+      2
+    ]
+  },
+  "fcFxPortFcphVersionHigh": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcphVersion"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortEntry",
+      3
+    ]
+  },
+  "fcFxPortFcphVersionLow": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcphVersion"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortEntry",
+      4
+    ]
+  },
+  "fcFxPortBbCredit": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcBbCredit"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortEntry",
+      5
+    ]
+  },
+  "fcFxPortRxBufSize": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcRxDataFieldSize"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortEntry",
+      6
+    ]
+  },
+  "fcFxPortRatov": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "MilliSeconds"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortEntry",
+      7
+    ]
+  },
+  "fcFxPortEdtov": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "MilliSeconds"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortEntry",
+      8
+    ]
+  },
+  "fcFxPortCosSupported": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcCosCap"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortEntry",
+      9
+    ]
+  },
+  "fcFxPortIntermixSupported": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortEntry",
+      10
+    ]
+  },
+  "fcFxPortStackedConnMode": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcStackedConnMode"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortEntry",
+      11
+    ]
+  },
+  "fcFxPortClass2SeqDeliv": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortEntry",
+      12
+    ]
+  },
+  "fcFxPortClass3SeqDeliv": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortEntry",
+      13
+    ]
+  },
+  "fcFxPortHoldTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "MicroSeconds"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortEntry",
+      14
+    ]
+  },
+  "fcFxPortStatusTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF FcFxPortStatusEntry"
+    },
+    "index": null,
+    "value": [
+      "fcFeStatus",
+      1
+    ]
+  },
+  "fcFxPortStatusEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcFxPortStatusEntry"
+    },
+    "index": "fcFxPortEntry",
+    "value": [
+      "fcFxPortStatusTable",
+      1
+    ]
+  },
+  "FcFxPortStatusEntry": {
+    "tp": "SEQUENCE"
+  },
+  "fcFxPortID": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcAddressId"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortStatusEntry",
+      1
+    ]
+  },
+  "fcFxPortBbCreditAvailable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Gauge32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortStatusEntry",
+      2
+    ]
+  },
+  "fcFxPortOperMode": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "unknown",
+        "2": "fPort",
+        "3": "flPort"
+      }
+    },
+    "index": null,
+    "value": [
+      "fcFxPortStatusEntry",
+      3
+    ]
+  },
+  "fcFxPortAdminMode": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "2": "fPort",
+        "3": "flPort"
+      }
+    },
+    "index": null,
+    "value": [
+      "fcFxPortStatusEntry",
+      4
+    ]
+  },
+  "fcFxPortPhysTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF FcFxPortPhysEntry"
+    },
+    "index": null,
+    "value": [
+      "fcFeStatus",
+      2
+    ]
+  },
+  "fcFxPortPhysEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcFxPortPhysEntry"
+    },
+    "index": "fcFxPortEntry",
+    "value": [
+      "fcFxPortPhysTable",
+      1
+    ]
+  },
+  "FcFxPortPhysEntry": {
+    "tp": "SEQUENCE"
+  },
+  "fcFxPortPhysAdminStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "online",
+        "2": "offline",
+        "3": "testing"
+      }
+    },
+    "index": null,
+    "value": [
+      "fcFxPortPhysEntry",
+      1
+    ]
+  },
+  "fcFxPortPhysOperStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "online",
+        "2": "offline",
+        "3": "testing",
+        "4": "linkFailure"
+      }
+    },
+    "index": null,
+    "value": [
+      "fcFxPortPhysEntry",
+      2
+    ]
+  },
+  "fcFxPortPhysLastChange": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TimeStamp"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortPhysEntry",
+      3
+    ]
+  },
+  "fcFxPortPhysRttov": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "MilliSeconds"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortPhysEntry",
+      4
+    ]
+  },
+  "fcFxLoginTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF FcFxLoginEntry"
+    },
+    "index": null,
+    "value": [
+      "fcFeStatus",
+      3
+    ]
+  },
+  "fcFxLoginEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcFxLoginEntry"
+    },
+    "index": [
+      "fcFeModuleIndex",
+      "fcFxPortIndex",
+      "fcFxPortNxLoginIndex"
+    ],
+    "value": [
+      "fcFxLoginTable",
+      1
+    ]
+  },
+  "FcFxLoginEntry": {
+    "tp": "SEQUENCE"
+  },
+  "fcFxPortNxLoginIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcFeNxPortIndex"
+    },
+    "index": null,
+    "value": [
+      "fcFxLoginEntry",
+      1
+    ]
+  },
+  "fcFxPortFcphVersionAgreed": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcphVersion"
+    },
+    "index": null,
+    "value": [
+      "fcFxLoginEntry",
+      2
+    ]
+  },
+  "fcFxPortNxPortBbCredit": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcBbCredit"
+    },
+    "index": null,
+    "value": [
+      "fcFxLoginEntry",
+      3
+    ]
+  },
+  "fcFxPortNxPortRxDataFieldSize": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcRxDataFieldSize"
+    },
+    "index": null,
+    "value": [
+      "fcFxLoginEntry",
+      4
+    ]
+  },
+  "fcFxPortCosSuppAgreed": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcCosCap"
+    },
+    "index": null,
+    "value": [
+      "fcFxLoginEntry",
+      5
+    ]
+  },
+  "fcFxPortIntermixSuppAgreed": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "fcFxLoginEntry",
+      6
+    ]
+  },
+  "fcFxPortStackedConnModeAgreed": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcStackedConnMode"
+    },
+    "index": null,
+    "value": [
+      "fcFxLoginEntry",
+      7
+    ]
+  },
+  "fcFxPortClass2SeqDelivAgreed": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "fcFxLoginEntry",
+      8
+    ]
+  },
+  "fcFxPortClass3SeqDelivAgreed": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "fcFxLoginEntry",
+      9
+    ]
+  },
+  "fcFxPortNxPortName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcNameId"
+    },
+    "index": null,
+    "value": [
+      "fcFxLoginEntry",
+      10
+    ]
+  },
+  "fcFxPortConnectedNxPort": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcAddressId"
+    },
+    "index": null,
+    "value": [
+      "fcFxLoginEntry",
+      11
+    ]
+  },
+  "fcFxPortBbCreditModel": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcBbCreditModel"
+    },
+    "index": null,
+    "value": [
+      "fcFxLoginEntry",
+      12
+    ]
+  },
+  "fcFxPortErrorTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF FcFxPortErrorEntry"
+    },
+    "index": null,
+    "value": [
+      "fcFeError",
+      1
+    ]
+  },
+  "fcFxPortErrorEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcFxPortErrorEntry"
+    },
+    "index": "fcFxPortEntry",
+    "value": [
+      "fcFxPortErrorTable",
+      1
+    ]
+  },
+  "FcFxPortErrorEntry": {
+    "tp": "SEQUENCE"
+  },
+  "fcFxPortLinkFailures": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortErrorEntry",
+      1
+    ]
+  },
+  "fcFxPortSyncLosses": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortErrorEntry",
+      2
+    ]
+  },
+  "fcFxPortSigLosses": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortErrorEntry",
+      3
+    ]
+  },
+  "fcFxPortPrimSeqProtoErrors": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortErrorEntry",
+      4
+    ]
+  },
+  "fcFxPortInvalidTxWords": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortErrorEntry",
+      5
+    ]
+  },
+  "fcFxPortInvalidCrcs": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortErrorEntry",
+      6
+    ]
+  },
+  "fcFxPortDelimiterErrors": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortErrorEntry",
+      7
+    ]
+  },
+  "fcFxPortAddressIdErrors": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortErrorEntry",
+      8
+    ]
+  },
+  "fcFxPortLinkResetIns": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortErrorEntry",
+      9
+    ]
+  },
+  "fcFxPortLinkResetOuts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortErrorEntry",
+      10
+    ]
+  },
+  "fcFxPortOlsIns": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortErrorEntry",
+      11
+    ]
+  },
+  "fcFxPortOlsOuts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortErrorEntry",
+      12
+    ]
+  },
+  "fcFxPortC1AccountingTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF FcFxPortC1AccountingEntry"
+    },
+    "index": null,
+    "value": [
+      "fcFeAccounting",
+      1
+    ]
+  },
+  "fcFxPortC1AccountingEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcFxPortC1AccountingEntry"
+    },
+    "index": "fcFxPortEntry",
+    "value": [
+      "fcFxPortC1AccountingTable",
+      1
+    ]
+  },
+  "FcFxPortC1AccountingEntry": {
+    "tp": "SEQUENCE"
+  },
+  "fcFxPortC1InFrames": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortC1AccountingEntry",
+      1
+    ]
+  },
+  "fcFxPortC1OutFrames": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortC1AccountingEntry",
+      2
+    ]
+  },
+  "fcFxPortC1InOctets": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortC1AccountingEntry",
+      3
+    ]
+  },
+  "fcFxPortC1OutOctets": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortC1AccountingEntry",
+      4
+    ]
+  },
+  "fcFxPortC1Discards": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortC1AccountingEntry",
+      5
+    ]
+  },
+  "fcFxPortC1FbsyFrames": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortC1AccountingEntry",
+      6
+    ]
+  },
+  "fcFxPortC1FrjtFrames": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortC1AccountingEntry",
+      7
+    ]
+  },
+  "fcFxPortC1InConnections": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortC1AccountingEntry",
+      8
+    ]
+  },
+  "fcFxPortC1OutConnections": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortC1AccountingEntry",
+      9
+    ]
+  },
+  "fcFxPortC1ConnTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "MilliSeconds"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortC1AccountingEntry",
+      10
+    ]
+  },
+  "fcFxPortC2AccountingTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF FcFxPortC2AccountingEntry"
+    },
+    "index": null,
+    "value": [
+      "fcFeAccounting",
+      2
+    ]
+  },
+  "fcFxPortC2AccountingEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcFxPortC2AccountingEntry"
+    },
+    "index": "fcFxPortEntry",
+    "value": [
+      "fcFxPortC2AccountingTable",
+      1
+    ]
+  },
+  "FcFxPortC2AccountingEntry": {
+    "tp": "SEQUENCE"
+  },
+  "fcFxPortC2InFrames": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortC2AccountingEntry",
+      1
+    ]
+  },
+  "fcFxPortC2OutFrames": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortC2AccountingEntry",
+      2
+    ]
+  },
+  "fcFxPortC2InOctets": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortC2AccountingEntry",
+      3
+    ]
+  },
+  "fcFxPortC2OutOctets": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortC2AccountingEntry",
+      4
+    ]
+  },
+  "fcFxPortC2Discards": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortC2AccountingEntry",
+      5
+    ]
+  },
+  "fcFxPortC2FbsyFrames": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortC2AccountingEntry",
+      6
+    ]
+  },
+  "fcFxPortC2FrjtFrames": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortC2AccountingEntry",
+      7
+    ]
+  },
+  "fcFxPortC3AccountingTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF FcFxPortC3AccountingEntry"
+    },
+    "index": null,
+    "value": [
+      "fcFeAccounting",
+      3
+    ]
+  },
+  "fcFxPortC3AccountingEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcFxPortC3AccountingEntry"
+    },
+    "index": "fcFxPortEntry",
+    "value": [
+      "fcFxPortC3AccountingTable",
+      1
+    ]
+  },
+  "FcFxPortC3AccountingEntry": {
+    "tp": "SEQUENCE"
+  },
+  "fcFxPortC3InFrames": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortC3AccountingEntry",
+      1
+    ]
+  },
+  "fcFxPortC3OutFrames": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortC3AccountingEntry",
+      2
+    ]
+  },
+  "fcFxPortC3InOctets": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortC3AccountingEntry",
+      3
+    ]
+  },
+  "fcFxPortC3OutOctets": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortC3AccountingEntry",
+      4
+    ]
+  },
+  "fcFxPortC3Discards": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortC3AccountingEntry",
+      5
+    ]
+  },
+  "fcFxPortCapTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF FcFxPortCapEntry"
+    },
+    "index": null,
+    "value": [
+      "fcFeCapabilities",
+      1
+    ]
+  },
+  "fcFxPortCapEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcFxPortCapEntry"
+    },
+    "index": "fcFxPortEntry",
+    "value": [
+      "fcFxPortCapTable",
+      1
+    ]
+  },
+  "FcFxPortCapEntry": {
+    "tp": "SEQUENCE"
+  },
+  "fcFxPortCapFcphVersionHigh": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcphVersion"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortCapEntry",
+      1
+    ]
+  },
+  "fcFxPortCapFcphVersionLow": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcphVersion"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortCapEntry",
+      2
+    ]
+  },
+  "fcFxPortCapBbCreditMax": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcBbCredit"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortCapEntry",
+      3
+    ]
+  },
+  "fcFxPortCapBbCreditMin": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcBbCredit"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortCapEntry",
+      4
+    ]
+  },
+  "fcFxPortCapRxDataFieldSizeMax": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcRxDataFieldSize"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortCapEntry",
+      5
+    ]
+  },
+  "fcFxPortCapRxDataFieldSizeMin": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcRxDataFieldSize"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortCapEntry",
+      6
+    ]
+  },
+  "fcFxPortCapCos": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcCosCap"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortCapEntry",
+      7
+    ]
+  },
+  "fcFxPortCapIntermix": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortCapEntry",
+      8
+    ]
+  },
+  "fcFxPortCapStackedConnMode": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FcStackedConnMode"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortCapEntry",
+      9
+    ]
+  },
+  "fcFxPortCapClass2SeqDeliv": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortCapEntry",
+      10
+    ]
+  },
+  "fcFxPortCapClass3SeqDeliv": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortCapEntry",
+      11
+    ]
+  },
+  "fcFxPortCapHoldTimeMax": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "MicroSeconds"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortCapEntry",
+      12
+    ]
+  },
+  "fcFxPortCapHoldTimeMin": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "MicroSeconds"
+    },
+    "index": null,
+    "value": [
+      "fcFxPortCapEntry",
+      13
+    ]
+  },
+  "fcFeMIBConformance": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "fcFeMIB",
+      2
+    ]
+  },
+  "fcFeMIBCompliances": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "fcFeMIBConformance",
+      1
+    ]
+  },
+  "fcFeMIBGroups": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "fcFeMIBConformance",
+      2
+    ]
+  },
+  "fcFeConfigGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "fcFeMIBGroups",
+      1
+    ]
+  },
+  "fcFeStatusGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "fcFeMIBGroups",
+      2
+    ]
+  },
+  "fcFeErrorGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "fcFeMIBGroups",
+      3
+    ]
+  },
+  "fcFeClass1AccountingGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "fcFeMIBGroups",
+      4
+    ]
+  },
+  "fcFeClass2AccountingGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "fcFeMIBGroups",
+      5
+    ]
+  },
+  "fcFeClass3AccountingGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "fcFeMIBGroups",
+      6
+    ]
+  },
+  "fcFeCapabilitiesGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "fcFeMIBGroups",
+      7
+    ]
+  }
+}
