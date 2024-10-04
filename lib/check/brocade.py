@@ -1,6 +1,5 @@
 from asyncsnmplib.mib.mib_index import MIB_INDEX
 from libprobe.asset import Asset
-from libprobe.exceptions import CheckException
 from ..snmpclient import get_snmp_client
 from ..snmpquery import snmpquery
 
@@ -21,11 +20,6 @@ async def check_brocade(
     snmp = get_snmp_client(asset, asset_config, check_config)
     state = await snmpquery(snmp, QUERIES)
 
-    try:
-        item = state['swSystem'][0]
-    except Exception:
-        raise CheckException('Incomplete SNMP response')
-
     state['swSystem'] = [{
         'name': 'brocade',
         'swCurrentDate': item.get('swCurrentDate'),
@@ -43,7 +37,7 @@ async def check_brocade(
         'swBeaconOperStatus': item.get('swBeaconOperStatus'),
         'swBeaconAdmStatus': item.get('swBeaconAdmStatus'),
         'swDiagResult': item.get('swDiagResult'),
-    }]
+    } for item in state.pop('swSystem', [])]  # swSystem is one item
 
     port_status = {
         item['name']: item for item in state.pop('fcFxPortStatusEntry', [])
