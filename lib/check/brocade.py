@@ -26,7 +26,7 @@ async def check_brocade(
     except Exception:
         raise CheckException('Incomplete SNMP response')
 
-    state['swSystem'] = {
+    state['swSystem'] = [{
         'name': 'brocade',
         'swCurrentDate': item.get('swCurrentDate'),
         'swBootDate': item.get('swBootDate'),
@@ -43,7 +43,7 @@ async def check_brocade(
         'swBeaconOperStatus': item.get('swBeaconOperStatus'),
         'swBeaconAdmStatus': item.get('swBeaconAdmStatus'),
         'swDiagResult': item.get('swDiagResult'),
-    }
+    }]
 
     port_status = {
         item['name']: item for item in state.pop('fcFxPortStatusEntry', [])
