@@ -44,7 +44,8 @@ async def check_brocade(
 
     sw_cpu_mem = state.pop('swCpuOrMemoryUsage', [])
     if len(sw_cpu_mem):
-        state['swCpuOrMemoryUsage'] = sw_cpu_mem  # swCpuOrMemoryUsage is one item
+        state['swCpuOrMemoryUsage'] = sw_cpu_mem
+        # swCpuOrMemoryUsage is one item
 
     port_status = {
         item['name']: item for item in state.pop('fcFxPortStatusEntry', [])
