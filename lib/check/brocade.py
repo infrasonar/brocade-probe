@@ -20,24 +20,31 @@ async def check_brocade(
     snmp = get_snmp_client(asset, asset_config, check_config)
     state = await snmpquery(snmp, QUERIES)
 
-    state['swSystem'] = [{
-        'name': 'brocade',
-        'swCurrentDate': item.get('swCurrentDate'),
-        'swBootDate': item.get('swBootDate'),
-        'swFWLastUpdated': item.get('swFWLastUpdated'),
-        'swFlashLastUpdated': item.get('swFlashLastUpdated'),
-        'swBootPromLastUpdated': item.get('swBootPromLastUpdated'),
-        'swFirmwareVersion': item.get('swFirmwareVersion'),
-        'swOperStatus': item.get('swOperStatus'),
-        'swAdmStatus': item.get('swAdmStatus'),
-        'swTelnetShellAdmStatus': item.get('swTelnetShellAdmStatus'),
-        'swSsn': item.get('swSsn'),
-        'swFlashDLOperStatus': item.get('swFlashDLOperStatus'),
-        'swFlashDLAdmStatus': item.get('swFlashDLAdmStatus'),
-        'swBeaconOperStatus': item.get('swBeaconOperStatus'),
-        'swBeaconAdmStatus': item.get('swBeaconAdmStatus'),
-        'swDiagResult': item.get('swDiagResult'),
-    } for item in state.pop('swSystem', [])]  # swSystem is one item
+    sw_system = state.pop('swSystem', [])
+    if len(sw_system):
+        item = sw_system[0]  # swSystem is one item
+        state['swSystem'] = [{
+            'name': 'brocade',
+            'swCurrentDate': item.get('swCurrentDate'),
+            'swBootDate': item.get('swBootDate'),
+            'swFWLastUpdated': item.get('swFWLastUpdated'),
+            'swFlashLastUpdated': item.get('swFlashLastUpdated'),
+            'swBootPromLastUpdated': item.get('swBootPromLastUpdated'),
+            'swFirmwareVersion': item.get('swFirmwareVersion'),
+            'swOperStatus': item.get('swOperStatus'),
+            'swAdmStatus': item.get('swAdmStatus'),
+            'swTelnetShellAdmStatus': item.get('swTelnetShellAdmStatus'),
+            'swSsn': item.get('swSsn'),
+            'swFlashDLOperStatus': item.get('swFlashDLOperStatus'),
+            'swFlashDLAdmStatus': item.get('swFlashDLAdmStatus'),
+            'swBeaconOperStatus': item.get('swBeaconOperStatus'),
+            'swBeaconAdmStatus': item.get('swBeaconAdmStatus'),
+            'swDiagResult': item.get('swDiagResult'),
+        }]
+
+    sw_cpu_mem = state.pop('swCpuOrMemoryUsage', [])
+    if len(sw_cpu_mem):
+        state['swCpuOrMemoryUsage'] = sw_cpu_mem  # swCpuOrMemoryUsage is one item
 
     port_status = {
         item['name']: item for item in state.pop('fcFxPortStatusEntry', [])
