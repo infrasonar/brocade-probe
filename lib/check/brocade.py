@@ -5,6 +5,7 @@ from ..snmpquery import snmpquery
 
 
 QUERIES = (
+    MIB_INDEX['SW-MIB']['swSystem'],
     MIB_INDEX['SW-MIB']['swCpuOrMemoryUsage'],
     MIB_INDEX['SW-MIB']['swFCPortEntry'],
     MIB_INDEX['FIBRE-CHANNEL-FE-MIB']['fcFxPortStatusEntry'],
