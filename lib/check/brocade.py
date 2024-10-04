@@ -1,5 +1,6 @@
 from asyncsnmplib.mib.mib_index import MIB_INDEX
 from libprobe.asset import Asset
+from libprobe.exceptions import CheckException
 from ..snmpclient import get_snmp_client
 from ..snmpquery import snmpquery
 
@@ -19,6 +20,30 @@ async def check_brocade(
         check_config: dict) -> dict:
     snmp = get_snmp_client(asset, asset_config, check_config)
     state = await snmpquery(snmp, QUERIES)
+
+    try:
+        item = state['swSystem'][0]
+    except Exception:
+        raise CheckException('Incomplete SNMP response')
+
+    state['swSystem'] = {
+        'name': 'brocade',
+        'swCurrentDate': item.get('swCurrentDate'),
+        'swBootDate': item.get('swBootDate'),
+        'swFWLastUpdated': item.get('swFWLastUpdated'),
+        'swFlashLastUpdated': item.get('swFlashLastUpdated'),
+        'swBootPromLastUpdated': item.get('swBootPromLastUpdated'),
+        'swFirmwareVersion': item.get('swFirmwareVersion'),
+        'swOperStatus': item.get('swOperStatus'),
+        'swAdmStatus': item.get('swAdmStatus'),
+        'swTelnetShellAdmStatus': item.get('swTelnetShellAdmStatus'),
+        'swSsn': item.get('swSsn'),
+        'swFlashDLOperStatus': item.get('swFlashDLOperStatus'),
+        'swFlashDLAdmStatus': item.get('swFlashDLAdmStatus'),
+        'swBeaconOperStatus': item.get('swBeaconOperStatus'),
+        'swBeaconAdmStatus': item.get('swBeaconAdmStatus'),
+        'swDiagResult': item.get('swDiagResult'),
+    }
 
     port_status = {
         item['name']: item for item in state.pop('fcFxPortStatusEntry', [])
