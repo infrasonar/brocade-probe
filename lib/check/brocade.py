@@ -18,4 +18,19 @@ async def check_brocade(
         check_config: dict) -> dict:
     snmp = get_snmp_client(asset, asset_config, check_config)
     state = await snmpquery(snmp, QUERIES)
+
+    port_status = {
+        item['name']: item for item in state.pop('fcFxPortStatusEntry', [])
+    }
+    port_phys = {
+        item['name']: item for item in state.pop('fcFxPortPhysEntry', [])
+    }
+    for item in state.get('swFCPortEntry', []):
+        name = item['name']
+        port_status_item = port_status.get(name)
+        if port_status_item:
+            item.update(port_status_item)
+        port_phys_item = port_phys.get(name)
+        if port_phys_item:
+            item.update(port_phys_item)
     return state
