@@ -6,6 +6,7 @@ from ..snmpquery import snmpquery
 
 QUERIES = (
     MIB_INDEX['SW-MIB']['swSystem'],
+    MIB_INDEX['SW-MIB']['swFabric'],
     MIB_INDEX['SW-MIB']['swCpuOrMemoryUsage'],
     MIB_INDEX['SW-MIB']['swFCPortEntry'],
     MIB_INDEX['FIBRE-CHANNEL-FE-MIB']['fcFxPortStatusEntry'],
@@ -41,6 +42,11 @@ async def check_brocade(
             'swBeaconAdmStatus': item.get('swBeaconAdmStatus'),
             'swDiagResult': item.get('swDiagResult'),
         }]
+
+    sw_fabric = state.pop('swFabric', [])
+    if len(sw_fabric):
+        state['swFabric'] = sw_fabric
+        # swFabric is one item
 
     sw_cpu_mem = state.pop('swCpuOrMemoryUsage', [])
     if len(sw_cpu_mem):
