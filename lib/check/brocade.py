@@ -9,6 +9,7 @@ QUERIES = (
     MIB_INDEX['SW-MIB']['swFabric'],
     MIB_INDEX['SW-MIB']['swCpuOrMemoryUsage'],
     MIB_INDEX['SW-MIB']['swFCPortEntry'],
+    MIB_INDEX['SW-MIB']['swSensorEntry'],
 )
 
 
@@ -39,6 +40,20 @@ async def check_brocade(
             'swBeaconOperStatus': item.get('swBeaconOperStatus'),
             'swBeaconAdmStatus': item.get('swBeaconAdmStatus'),
             'swDiagResult': item.get('swDiagResult'),
+            'swNumSensors': item.get('swNumSensors'),
+            'swTrackChangesInfo': item.get('swTrackChangesInfo'),
+            'swID': item.get('swID'),
+            'swEtherIPAddress': item.get('swEtherIPAddress'),
+            'swEtherIPMask': item.get('swEtherIPMask'),
+            'swFCIPAddress': item.get('swFCIPAddress'),
+            'swIPv6Address': item.get('swIPv6Address'),
+            'swIPv6Status': item.get('swIPv6Status'),
+            'swModel': item.get('swModel'),
+            'swTestString': item.get('swTestString'),
+            'swPortList': item.get('swPortList'),
+            'swBrcdTrapBitMask': item.get('swBrcdTrapBitMask'),
+            'swFCPortPrevType': item.get('swFCPortPrevType'),
+            'swDeviceStatus': item.get('swDeviceStatus'),
         }]
 
     sw_fabric = state.pop('swFabric', [])
