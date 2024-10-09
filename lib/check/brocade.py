@@ -9,8 +9,6 @@ QUERIES = (
     MIB_INDEX['SW-MIB']['swFabric'],
     MIB_INDEX['SW-MIB']['swCpuOrMemoryUsage'],
     MIB_INDEX['SW-MIB']['swFCPortEntry'],
-    MIB_INDEX['FIBRE-CHANNEL-FE-MIB']['fcFxPortStatusEntry'],
-    MIB_INDEX['FIBRE-CHANNEL-FE-MIB']['fcFxPortPhysEntry'],
 )
 
 
@@ -53,18 +51,4 @@ async def check_brocade(
         state['swCpuOrMemoryUsage'] = sw_cpu_mem
         # swCpuOrMemoryUsage is one item
 
-    port_status = {
-        item['name']: item for item in state.pop('fcFxPortStatusEntry', [])
-    }
-    port_phys = {
-        item['name']: item for item in state.pop('fcFxPortPhysEntry', [])
-    }
-    for item in state.get('swFCPortEntry', []):
-        name = item['name']
-        port_status_item = port_status.get(name)
-        if port_status_item:
-            item.update(port_status_item)
-        port_phys_item = port_phys.get(name)
-        if port_phys_item:
-            item.update(port_phys_item)
     return state
