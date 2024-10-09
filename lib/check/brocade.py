@@ -5,10 +5,11 @@ from ..snmpquery import snmpquery
 
 
 QUERIES = (
+    MIB_INDEX['SW-MIB']['swSystem'],
+    MIB_INDEX['SW-MIB']['swFabric'],
     MIB_INDEX['SW-MIB']['swCpuOrMemoryUsage'],
     MIB_INDEX['SW-MIB']['swFCPortEntry'],
-    MIB_INDEX['FIBRE-CHANNEL-FE-MIB']['fcFxPortStatusEntry'],
-    MIB_INDEX['FIBRE-CHANNEL-FE-MIB']['fcFxPortPhysEntry'],
+    MIB_INDEX['SW-MIB']['swSensorEntry'],
 )
 
 
@@ -19,18 +20,50 @@ async def check_brocade(
     snmp = get_snmp_client(asset, asset_config, check_config)
     state = await snmpquery(snmp, QUERIES)
 
-    port_status = {
-        item['name']: item for item in state.pop('fcFxPortStatusEntry', [])
-    }
-    port_phys = {
-        item['name']: item for item in state.pop('fcFxPortPhysEntry', [])
-    }
-    for item in state.get('swFCPortEntry', []):
-        name = item['name']
-        port_status_item = port_status.get(name)
-        if port_status_item:
-            item.update(port_status_item)
-        port_phys_item = port_phys.get(name)
-        if port_phys_item:
-            item.update(port_phys_item)
+    sw_system = state.pop('swSystem', [])
+    if len(sw_system):
+        item = sw_system[0]  # swSystem is one item
+        state['swSystem'] = [{
+            'name': 'brocade',
+            'swCurrentDate': item.get('swCurrentDate'),
+            'swBootDate': item.get('swBootDate'),
+            'swFWLastUpdated': item.get('swFWLastUpdated'),
+            'swFlashLastUpdated': item.get('swFlashLastUpdated'),
+            'swBootPromLastUpdated': item.get('swBootPromLastUpdated'),
+            'swFirmwareVersion': item.get('swFirmwareVersion'),
+            'swOperStatus': item.get('swOperStatus'),
+            'swAdmStatus': item.get('swAdmStatus'),
+            'swTelnetShellAdmStatus': item.get('swTelnetShellAdmStatus'),
+            'swSsn': item.get('swSsn'),
+            'swFlashDLOperStatus': item.get('swFlashDLOperStatus'),
+            'swFlashDLAdmStatus': item.get('swFlashDLAdmStatus'),
+            'swBeaconOperStatus': item.get('swBeaconOperStatus'),
+            'swBeaconAdmStatus': item.get('swBeaconAdmStatus'),
+            'swDiagResult': item.get('swDiagResult'),
+            'swNumSensors': item.get('swNumSensors'),
+            'swTrackChangesInfo': item.get('swTrackChangesInfo'),
+            'swID': item.get('swID'),
+            'swEtherIPAddress': item.get('swEtherIPAddress'),
+            'swEtherIPMask': item.get('swEtherIPMask'),
+            'swFCIPAddress': item.get('swFCIPAddress'),
+            'swIPv6Address': item.get('swIPv6Address'),
+            'swIPv6Status': item.get('swIPv6Status'),
+            'swModel': item.get('swModel'),
+            'swTestString': item.get('swTestString'),
+            'swPortList': item.get('swPortList'),
+            'swBrcdTrapBitMask': item.get('swBrcdTrapBitMask'),
+            'swFCPortPrevType': item.get('swFCPortPrevType'),
+            'swDeviceStatus': item.get('swDeviceStatus'),
+        }]
+
+    sw_fabric = state.pop('swFabric', [])
+    if len(sw_fabric):
+        state['swFabric'] = sw_fabric
+        # swFabric is one item
+
+    sw_cpu_mem = state.pop('swCpuOrMemoryUsage', [])
+    if len(sw_cpu_mem):
+        state['swCpuOrMemoryUsage'] = sw_cpu_mem
+        # swCpuOrMemoryUsage is one item
+
     return state

@@ -31,6 +31,7 @@ See the [SNMP probe](https://github.com/infrasonar/snmp-probe#config).
 
 Available checks:
 - `brocade`
+- `fcfxport`
 
 Create a yaml file, for example _(test.yaml)_:
 
