@@ -46,6 +46,7 @@ async def check_brocade(
             'swEtherIPAddress': item.get('swEtherIPAddress'),
             'swEtherIPMask': item.get('swEtherIPMask'),
             'swFCIPAddress': item.get('swFCIPAddress'),
+            'swFCIPMask': item.get('swFCIPMask'),
             'swIPv6Address': item.get('swIPv6Address'),
             'swIPv6Status': item.get('swIPv6Status'),
             'swModel': item.get('swModel'),
