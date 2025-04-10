@@ -5,9 +5,9 @@ from ..snmpquery import snmpquery
 
 
 QUERIES = (
-    MIB_INDEX['FIBRE-CHANNEL-FE-MIB']['fcFxPortEntry'],
-    MIB_INDEX['FIBRE-CHANNEL-FE-MIB']['fcFxPortStatusEntry'],
-    MIB_INDEX['FIBRE-CHANNEL-FE-MIB']['fcFxPortPhysEntry'],
+    (MIB_INDEX['FIBRE-CHANNEL-FE-MIB']['fcFxPortEntry'], True),
+    (MIB_INDEX['FIBRE-CHANNEL-FE-MIB']['fcFxPortStatusEntry'], True),
+    (MIB_INDEX['FIBRE-CHANNEL-FE-MIB']['fcFxPortPhysEntry'], True),
 )
 
 

@@ -5,11 +5,11 @@ from ..snmpquery import snmpquery
 
 
 QUERIES = (
-    MIB_INDEX['SW-MIB']['swSystem'],
-    MIB_INDEX['SW-MIB']['swFabric'],
-    MIB_INDEX['SW-MIB']['swCpuOrMemoryUsage'],
-    MIB_INDEX['SW-MIB']['swFCPortEntry'],
-    MIB_INDEX['SW-MIB']['swSensorEntry'],
+    (MIB_INDEX['SW-MIB']['swSystem'], False),
+    (MIB_INDEX['SW-MIB']['swFabric'], False),
+    (MIB_INDEX['SW-MIB']['swCpuOrMemoryUsage'], False),
+    (MIB_INDEX['SW-MIB']['swFCPortEntry'], True),
+    (MIB_INDEX['SW-MIB']['swSensorEntry'], True),
 )
 
 
