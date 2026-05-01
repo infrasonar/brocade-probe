@@ -1,5 +1,6 @@
 from asyncsnmplib.mib.mib_index import MIB_INDEX
 from libprobe.asset import Asset
+from libprobe.check import Check
 from ..snmpclient import get_snmp_client
 from ..snmpquery import snmpquery
 
@@ -13,50 +14,53 @@ QUERIES = (
 )
 
 
-async def check_brocade(
-        asset: Asset,
-        asset_config: dict,
-        check_config: dict) -> dict:
-    snmp = get_snmp_client(asset, asset_config, check_config)
-    state = await snmpquery(snmp, QUERIES)
+class CheckBrocade(Check):
+    key = 'brocade'
+    unchanged_eol = 0
 
-    sw_system = state.pop('swSystem', [])
-    if len(sw_system):
-        item = sw_system[0]  # swSystem is one item
-        state['swSystem'] = [{
-            'name': 'brocade',
-            'swCurrentDate': item.get('swCurrentDate'),
-            'swBootDate': item.get('swBootDate'),
-            'swFWLastUpdated': item.get('swFWLastUpdated'),
-            'swFlashLastUpdated': item.get('swFlashLastUpdated'),
-            'swBootPromLastUpdated': item.get('swBootPromLastUpdated'),
-            'swFirmwareVersion': item.get('swFirmwareVersion'),
-            'swOperStatus': item.get('swOperStatus'),
-            'swAdmStatus': item.get('swAdmStatus'),
-            'swTelnetShellAdmStatus': item.get('swTelnetShellAdmStatus'),
-            'swSsn': item.get('swSsn'),
-            'swFlashDLOperStatus': item.get('swFlashDLOperStatus'),
-            'swFlashDLAdmStatus': item.get('swFlashDLAdmStatus'),
-            'swBeaconOperStatus': item.get('swBeaconOperStatus'),
-            'swBeaconAdmStatus': item.get('swBeaconAdmStatus'),
-            'swDiagResult': item.get('swDiagResult'),
-            'swNumSensors': item.get('swNumSensors'),
-            'swID': item.get('swID'),
-            'swEtherIPAddress': item.get('swEtherIPAddress'),
-            'swEtherIPMask': item.get('swEtherIPMask'),
-            'swFCIPAddress': item.get('swFCIPAddress'),
-            'swFCIPMask': item.get('swFCIPMask'),
-            'swModel': item.get('swModel'),
-        }]
+    @staticmethod
+    async def run(asset: Asset, local_config: dict, config: dict) -> dict:
 
-    sw_fabric = state.pop('swFabric', [])
-    if len(sw_fabric):
-        state['swFabric'] = sw_fabric
-        # swFabric is one item
+        snmp = get_snmp_client(asset, local_config, config)
+        state = await snmpquery(snmp, QUERIES)
 
-    sw_cpu_mem = state.pop('swCpuOrMemoryUsage', [])
-    if len(sw_cpu_mem):
-        state['swCpuOrMemoryUsage'] = sw_cpu_mem
-        # swCpuOrMemoryUsage is one item
+        sw_system = state.pop('swSystem', [])
+        if len(sw_system):
+            item = sw_system[0]  # swSystem is one item
+            state['swSystem'] = [{
+                'name': 'brocade',
+                'swCurrentDate': item.get('swCurrentDate'),
+                'swBootDate': item.get('swBootDate'),
+                'swFWLastUpdated': item.get('swFWLastUpdated'),
+                'swFlashLastUpdated': item.get('swFlashLastUpdated'),
+                'swBootPromLastUpdated': item.get('swBootPromLastUpdated'),
+                'swFirmwareVersion': item.get('swFirmwareVersion'),
+                'swOperStatus': item.get('swOperStatus'),
+                'swAdmStatus': item.get('swAdmStatus'),
+                'swTelnetShellAdmStatus': item.get('swTelnetShellAdmStatus'),
+                'swSsn': item.get('swSsn'),
+                'swFlashDLOperStatus': item.get('swFlashDLOperStatus'),
+                'swFlashDLAdmStatus': item.get('swFlashDLAdmStatus'),
+                'swBeaconOperStatus': item.get('swBeaconOperStatus'),
+                'swBeaconAdmStatus': item.get('swBeaconAdmStatus'),
+                'swDiagResult': item.get('swDiagResult'),
+                'swNumSensors': item.get('swNumSensors'),
+                'swID': item.get('swID'),
+                'swEtherIPAddress': item.get('swEtherIPAddress'),
+                'swEtherIPMask': item.get('swEtherIPMask'),
+                'swFCIPAddress': item.get('swFCIPAddress'),
+                'swFCIPMask': item.get('swFCIPMask'),
+                'swModel': item.get('swModel'),
+            }]
 
-    return state
+        sw_fabric = state.pop('swFabric', [])
+        if len(sw_fabric):
+            state['swFabric'] = sw_fabric
+            # swFabric is one item
+
+        sw_cpu_mem = state.pop('swCpuOrMemoryUsage', [])
+        if len(sw_cpu_mem):
+            state['swCpuOrMemoryUsage'] = sw_cpu_mem
+            # swCpuOrMemoryUsage is one item
+
+        return state
